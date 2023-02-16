@@ -12,6 +12,10 @@ class cliente_controlador{
       //  $this->vista->datos=cliente_modelo::mdlListar();
         $this->vista->unirContenido("cliente/principal"); 
     }
+    public function perfiles(){
+        //  $this->vista->datos=cliente_modelo::mdlListar();
+          $this->vista->unirContenido("cliente/perfil"); 
+      }
     public function login(){
         //  $this->vista->datos=cliente_modelo::mdlListar();
           $this->vista->unirContenido("inicio/login"); 

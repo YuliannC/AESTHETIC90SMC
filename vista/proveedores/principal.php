@@ -1,116 +1,197 @@
-<!--
-=========================================================
-* Material Kit 2 - v3.0.4
-=========================================================
 
-* Product Page:  https://www.creative-tim.com/product/material-kit 
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Coded by www.creative-tim.com
+<style>
+  h1{
+    text-align: center;
+  }
+  img{
+    text-align: center;
+    width: 100%;
+  }
+  .modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+	text-align: center;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalDialog > div {
+	width: 750px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+  -webkit-transition: opacity 400ms ease-in;
+-moz-transition: opacity 400ms ease-in;
+transition: opacity 400ms ease-in;
+}
+.close {
+	background: white;
+	color: black;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+.close:hover { background: white; }
+*{box-sizing:border-box;}
 
- =========================================================
+form{
+	width:700px;
+	padding:16px;
+	border-radius:10px;
+	margin:auto;
+	background-color:#ccc;
+}
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
-<!DOCTYPE html>
-<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+form label{
+	width:72px;
+	font-weight:bold;
+	display:inline-block;
+}
 
-<head>
+form input[type="number"],
+form input[type="text"],
+form input[type="email"]{
+	width:340px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
+}
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+form input[type="submit"]{
+	width:100%;
+	padding:8px 16px;
+	margin-top:32px;
+	border:1px solid #000;
+	border-radius:5px;
+	display:block;
+	color: black;
+	background-color: gray;
+} 
 
-<link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
-<link rel="icon" type="image/png" href="./assets/img/favicon.png">
+form input[type="submit"]:hover{
+	cursor:pointer;
+}
 
-<title>
-  
+textarea{
+	width:100%;
+	height:100px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;			
+	margin:8px 0;
+	/*resize: vertical | horizontal | none | both*/
+	resize:none;
+	display:block;
+}
+.buscar{
+	width:340px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
+}
 
-  
-  ADMIN | PROVEEDORES
 
-  
-</title>
+</style>
 
+<!-- Menu -->
 
+<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
+		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
+		<div class="logo menu_mm"><a href="#">Aesthetic 90s Mc</a></div>
+		<div class="search">
+			<form action="#">
+				<input type="search" class="search_input menu_mm" required="required">
+				<button type="submit" id="search_button_menu" class="search_button menu_mm"><img class="menu_mm" src="public/images/magnifying-glass.svg" alt=""></button>
+			</form>
+		</div>
+		<nav class="menu_nav">
+			<ul class="menu_mm">
+				<li class="menu_mm"><a href="#">Inicio</a></li>
+				<li class="menu_mm"><a href="?controlador=cliente&accion=principal">Clientes</a></li>
+				<li class="menu_mm"><a href="?controlador=proveedores&accion=principal">Proveedores</a></li>
+				<li class="menu_mm"><a href="?controlador=productos&accion=principal">Productos</a></li>
+				<li class="menu_mm"><a href="?controlador=administrador&accion=listarPQR">PQR</a></li>
+			</ul>
+		</nav>
+	</div>
+  <br><br><br><br>  <br>
+  <img src="public/images/administra.jpeg" alt="">
+  <div class="row">
+        <div class="col-md-3 col-md-offset-9 text-right" >
+            <div class="btn-group" role="group">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<div class="button extra_2_button" style="text-align: center;" ><a href="#openModal">Registrar</a></div>&nbsp;&nbsp;&nbsp;
+			<div class="button extra_2_button"><a href="checkout.html">Listar</a></div>&nbsp;&nbsp;&nbsp;	
+			<div class="extra_2_button"> <input type="text" placeholder="Buscar por nombre" class="buscar"> </div>&nbsp;&nbsp;&nbsp;
+			<div class="extra_2_button"> <input type="submit" class="search_button" value=""><img src="public/images/magnifying-glass.svg" alt="">			
+            </div>
+        </div>
+    </div>
 
+  <!-- MODAL FRM REGISTRAR -->
 
-<body class="index-page bg-gray-200">
-  
-  
-  <!-- Navbar -->
-<div class="container position-sticky z-index-sticky top-0"><div class="row"><div class="col-12">
-<nav class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
-  <div class="container-fluid px-0">
-    <a class="navbar-brand font-weight-bolder ms-sm-3" href="?controlador=inicio&accion=principal" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
-      AESTHETIC 90s MC
-    </a>
-    <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon mt-2">
-        <span class="navbar-toggler-bar bar1"></span>
-        <span class="navbar-toggler-bar bar2"></span>
-        <span class="navbar-toggler-bar bar3"></span>
-      </span>
-    </button>
-      <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
-        <ul class="navbar-nav navbar-nav-hover ms-auto">
-        
-            <li class="nav-item dropdown dropdown-hover mx-2">
-            <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false" href="?controlador=inicio&accion=principal">
-              <!-- <i class="Home opacity-6 me-2 text-md"></i> -->
-              Inicio
-              <!-- <img src="public/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2"> -->
-            </a>
-          <li class="nav-item dropdown dropdown-hover mx-2">
-            <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false" href="?controlador=cliente&accion=principal">
-              <!-- <i class="Home opacity-6 me-2 text-md"></i> -->
-              Clientes
-              <!-- <img src="public/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2"> -->
-            </a>
+<div id="openModal" class="modalDialog">
+	<div>
+		<a href="#close" title="Close" class="close" style="color:black;" >X</a>
 
-          <li class="nav-item dropdown dropdown-hover mx-2">
-            <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false" href="?controlador=productos&accion=principal">
-              <!-- <i class="material-icons opacity-6 me-2 text-md">article</i> -->
-                productos
-              <!-- <img src="public/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2"> -->
-            </a>
-            <li class="nav-item dropdown dropdown-hover mx-2">
-              <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false" href="?controlador=proveedores&accion=principal">
-                <!-- <i class="material-icons opacity-6 me-2 text-md">article</i> -->
-                  Proveedores
-                <!-- <img src="public/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2"> -->
-              </a>
-                </div>
-                </div>
-           
-                </div>
-  </div>
-</nav>
-<!-- End Navbar -->
-</div></div></div>
-<header class="header-2">
-  <div class="page-header min-vh-70 relative" style="background-image: url('./assets/img/bg2.jpg')">
-    <span class="mask bg-gradient-primary opacity-4"></span>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-7 text-center mx-auto">
-    <!-- <a href="frmCliente" class="btn btn-sm bg-gradient-primary w-50 border-radius-md mt-2 mb-2">Registrar cliente</a> -->
-    <!-- <a href="frmCliente" class="btn btn-sm bg-gradient-primary w-100 border-radius-md mt-4 mb-2"></a> -->
-    <!-- <section class="py-7">
-  <div class="container">
-    <div class="row justify-space-between py-2">
-      <div class="col-lg-5 mx-auto">
-        <div class="input-group input-group-dynamic mb-">
-          <span class="input-group-text"><i class="fas fa-search" aria-hidden="true"></i></span>
-          <input class="form-control" placeholder="Search" type="text" >
+			<form action="?controlador=proveedores&accion=Registrar" autocomplete="off" id="frmRegistro" method="post" name="formDatosPersonales">
+			<h2 style="color:black; text-align:center;">Registrar Proveedores</h2>
+					<br>	
+			<label for="nombre">Nombre</label>
+			<input type="text" name="nombre" id="nombre" placeholder="nombre"/>
+			<br><br>
+			<label for="apellidos">Telefono</label>
+			<input type="number" name="telefono" id="telefono" placeholder="telefono"/>
+			<br><br>
+			<label for="email" >Direccion</label>
+			<input type="text" name="direccion" id="direccion" placeholder="direccion" required />
+			<br><br>
+			<label for="asunto">Seccion</label>
+			<input type ="text" name="seccion" id="seccion" placeholder="seccion"/>
+
+			<input type="submit" name="enviar" value="enviar datos">
+
+			</form>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section> --> <br><br><br><br><br>
-<a href="?controlador=provedores&accion=frmRegistro" class="btn bg-gradient-primary">Registrar proveedor</a>
-          <a href="?controlador=cliente&accion=reporteClientes" class="btn bg-gradient-primary" target="_blank" >Reporte de productos </a>
+      </div>
+	</div>
+	
 
-         
-          <div class="input-group input-group-outline mb3">
-                  <label class="form-label">Consultar proveedor</label>
-                  <input type="text" class="form-control"name="apellidos" id="apellidos">
-          </div>
+</div>  

@@ -17,6 +17,11 @@ class administrador_controlador{
         $this->vista->unirContenido("administrador/principal");
         
     }
+    public function  listarPQR(){
+        //$this->vista->datos = cliente_modelo::mdlListar();
+        $this->vista->unirContenido("administrador/pqr");
+        
+    }
      public function registros(){
          $this->vista->unirContenido("administrador/registro");
         //  if($_SESSION['CLI_ROL'] == "Administrador" ||
@@ -28,21 +33,20 @@ class administrador_controlador{
        //         $_SESSION['CLI_ROL'] == "Mecanico")
    }
     
-    public function registrar(){
+    public function registrarPqr(){
         extract($_POST);
         $datos["nombres"]   = $nombres;
-        $datos["srol"]      = $srol;
-        $datos["apellidos"] = $apellidos;
-        $datos["documento"] = $documento;
-        $datos["codigo"]    = $codigo;
-        $datos["password"]      = $documento;
+        $datos["apellidos"]   = $apellidos;
+        $datos["whatsapp"] = $whatsapp;
+        $datos["correo"]      = $correo;
+        $datos["mensaje"] = $mensaje;
 
-        $r = cliente_modelo::mdlRegistrar($datos);
+        $r = administrador_modelo::mdlRegistrarPqr($datos);
         if($r > 0){
-        echo json_encode(array("mensaje" => "Cliente registrado",
+        echo json_encode(array("mensaje" => "PQR registrado",
                         "icono"=> "success"));
         }else{
-            echo json_encode(array("mensaje" => "Error al registrar un cliente",
+            echo json_encode(array("mensaje" => "Error al registrar PQR",
                         "icono"=> "error"));
         }
     }

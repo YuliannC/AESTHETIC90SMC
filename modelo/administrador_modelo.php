@@ -1,14 +1,14 @@
 <?php
 class administrador_modelo{
-    public static function mdlRegistrar($datos){
-      $o = new conexion();
+    public static function mdlRegistrarPqr($datos){
+      $o = new conexion(); 
       $c = $o->getConexion();
-      $sql = "INSERT INTO t_clientes
-              (CLI_NOMBRES, CLI_ROL, CLI_APELLIDOS, CLI_DOCUMENTO, CLI_CODIGO, CLI_PASS)
+      $sql = "INSERT INTO t_contacto
+              (CON_NOMBRES, CON_APELLIDO, CON_TELEFONO, CON_CORREO, CON_DESCRIPCION)
               VALUES
-              (? , ? , ? , ?, ?, ?)";
+              (? , ? , ? , ? , ?)";
       $s = $c->prepare($sql);
-      $v = array($datos["nombres"],$datos["srol"],$datos["apellidos"],$datos["documento"],$datos["codigo"],sha1($datos["password"]));        
+      $v = array($datos["nombres"],$datos["apellidos"],$datos["whatsapp"],$datos["correo"],$datos["mensaje"]);        
       return $s->execute($v);
     }
     //funcion de editar
@@ -61,7 +61,7 @@ class administrador_modelo{
   public static function mdlconsultarByApellido($apellidos){
     $o = new conexion();
     $c = $o->getConexion();
-    $sql = "SELECT * FROM t_clientes WHERE CLI_APELLIDOS LIKE '$apellidos%' AND CLI_ESTADO = 1";
+    $sql = "SELECT * FROM t_usuario WHERE USU_APELLIDOS LIKE '$apellidos%' AND USU_ESTADO = 1";
     $s = $c->prepare($sql);
     $v = array($apellidos);
     $s->execute();        
