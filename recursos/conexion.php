@@ -3,18 +3,12 @@ class conexion{
     private $c; 
     private $usuario ="root"; 
     private $password =""; 
-    private $host ="mysql:host=localhost;dbname=BDMVC2";
-
-    private $usuario1 ="id19540103_isaac"; 
-    private $password1 ="3gOg=c@ZDl8KpS\*"; 
-    private $host1 ="mysql:host=localhost;dbname=id19540103_automotriz";
+    private $host ="mysql:host=localhost;dbname=aesthetic90mc;port=3306";
 
     public function __construct(){ 
         try{
             if($_SERVER["SERVER_NAME"] == "localhost"){
                 $this->c = new PDO($this->host, $this->usuario, $this->password);
-            }else{
-                $this->c = new PDO($this->host1, $this->usuario1, $this->password1);
             }
             $this->c->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         }catch(PDOException $e){

@@ -108,8 +108,8 @@
 <div class="input-group input-group-outline mb-3">
 </div>
 <div class="input-group input-group-dynamic">
-<label class="form-label" style="text-aling center">Ingresa tu Usuario</label>
-<input type="email" class="form-control">
+<label class="form-label" style="text-aling:center;  ">Ingresa tu Usuario</label>
+<input type="email" class="form-control" style="with: 100px;">
 </div>
 <div class="input-group input-group-dynamic">
 <label class="form-label">Ingresa tu Contraseña</label>
@@ -122,7 +122,7 @@ Acepta los <a href="../../pages/privacy.html" class="text-dark font-weight-bolde
 </label>
 </div>
 <div class="text-center">
-<button type="button" class="btn bg-gradient-primary w-100 mt-4 mb-0">Ingresar</button>
+  <a href="?controlador=administrador&accion=principal" class="btn bg-gradient-primary mt-3 mb-0">Ingresar</a>
 </div>
 </form>
           </p>
@@ -136,57 +136,4 @@ Acepta los <a href="../../pages/privacy.html" class="text-dark font-weight-bolde
 
 
 <footer class="footer my-auto py-2 position-absolute w-100 bottom-0">
-<div class="container-fluid">
-<div class="row align-items-center justify-content-lg-between">
-<div class="col-12 col-md-6 my-auto">
-<div class="copyright text-center text-sm text-muted text-lg-start">
-© <script>
-              document.write(new Date().getFullYear())
-            </script>2022,
-made with <i class="fa fa-heart" aria-hidden="true"></i> by
-<a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">Creative Tim</a>
-for a better web.
-</div>
-</div>
-<div class="col-12 col-md-6">
-<ul class="nav nav-footer justify-content-center justify-content-lg-end">
-<li class="nav-item">
-<a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Creative Tim</a>
-</li>
-<li class="nav-item">
-<a href="https://www.creative-tim.com/presentation" class="nav-link text-muted" target="_blank">About Us</a>
-</li>
-<li class="nav-item">
-<a href="https://www.creative-tim.com/blog" class="nav-link text-muted" target="_blank">Blog</a>
-</li>
-<li class="nav-item">
-<a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted" target="_blank">License</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
 </footer>
-
-<script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
-<script src="../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
-<script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
-
-<script src="../../assets/js/plugins/typedjs.js"></script>
-
-<script src="../../assets/js/plugins/parallax.min.js"></script>
-
-<script src="../../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
-
-<script src="../../assets/js/plugins/anime.min.js" type="text/javascript"></script>
-
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
-
-<script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
-<script src="../../assets/js/material-kit-pro.min.js?v=3.0.2" type="text/javascript"></script>
-<script>
-  </script>
-<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon="{&quot;rayId&quot;:&quot;770cbddaaf7bf88f&quot;,&quot;version&quot;:&quot;2022.11.3&quot;,&quot;r&quot;:1,&quot;token&quot;:&quot;1b7cbb72744b40c580f8633c6b62637e&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
-
-</body>

@@ -11,7 +11,7 @@ class inicio_controlador{
     }
     public function principal(){
       // if(!isset($_SESSION["CLI_ID"])){
-      //     header("location: /APPAUTOMOTRIZ");
+      //     header("location: /");
       // }
       $this->vista->unirContenido("inicio/principal");
   }

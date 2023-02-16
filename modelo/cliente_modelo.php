@@ -3,12 +3,12 @@ class cliente_modelo{
     public static function mdlRegistrar($datos){
       $o = new conexion();
       $c = $o->getConexion();
-      $sql = "INSERT INTO t_clientes
-              (CLI_NOMBRES, CLI_ROL, CLI_APELLIDOS, CLI_DOCUMENTO, CLI_CODIGO, CLI_PASS)
+      $sql = "INSERT INTO t_usuario
+              (USU_NOMBRES, USU_APELLIDOS, USU_TELEFONO, USU_CORREO, USU_CONTRASENA,USU_ROL)
               VALUES
               (? , ? , ? , ?, ?, ?)";
       $s = $c->prepare($sql);
-      $v = array($datos["nombres"],$datos["srol"],$datos["apellidos"],$datos["documento"],$datos["codigo"],sha1($datos["password"]));        
+      $v = array($datos["nombres"],$datos["apellidos"],$datos["telefono"],$datos["correo"],sha1($datos["contrasena"]),$datos["srol"]);        
       return $s->execute($v);
     }
     //funcion de editar
@@ -61,7 +61,7 @@ class cliente_modelo{
   public static function mdlconsultarByApellido($apellidos){
     $o = new conexion();
     $c = $o->getConexion();
-    $sql = "SELECT * FROM t_clientes WHERE CLI_APELLIDOS LIKE '$apellidos%' AND CLI_ESTADO = 1";
+    $sql = "SELECT * FROM t_usuario WHERE USU_APELLIDOS LIKE '$apellidos%' AND USU_ESTADO = 1";
     $s = $c->prepare($sql);
     $v = array($apellidos);
     $s->execute();        

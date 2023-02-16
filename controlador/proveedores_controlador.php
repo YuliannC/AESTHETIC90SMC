@@ -1,5 +1,5 @@
 <?php
-require_once "modelo/productos_modelo.php";
+require_once "modelo/proveedores_modelo.php";
 class proveedores_controlador{
     public function __construct(){
         $this->vista= new  estructura();
@@ -26,10 +26,9 @@ class proveedores_controlador{
     public function registrar(){
         extract($_POST);
         $datos["nombre"]   = $nombre;
-        $datos["precio"]      = $precio;
-        $datos["descripcion"] = $descripcion;
-        $datos["cantidad"] = $cantidad;
-        $datos["colores"]    = $colores;
+        $datos["telefono"] = $telefono;
+        $datos["direccion"] = $direccion;
+        $datos["seccion"]    = $seccion;
 
         $r = proveedores_modelo::mdlRegistrar($datos);
         if($r > 0){

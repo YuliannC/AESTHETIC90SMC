@@ -106,7 +106,7 @@
     </div>
   </div>
 </section> --> <br><br><br><br><br>
-<a href="registro.php" class="btn bg-gradient-primary">Registrar proveedor</a>
+<a href="?controlador=provedores&accion=frmRegistro" class="btn bg-gradient-primary">Registrar proveedor</a>
           <a href="?controlador=cliente&accion=reporteClientes" class="btn bg-gradient-primary" target="_blank" >Reporte de productos </a>
 
          

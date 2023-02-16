@@ -1,4 +1,4 @@
-<a href="#openModal">Lanzar el modal</a>
+<a href="#openModal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
 
 <div id="openModal" class="modalDialog">
 	<div>
@@ -31,7 +31,7 @@
  <div class="slideshow">
  <?php for($s=0;$s<$max;$s++){ ?>
     <div class="item-slide">
-        <img src="public/assets/img/nav.png ">
+        <img src="public/assets/img/banneroriginal.jpg ">
     
     </div>
     	
@@ -212,6 +212,7 @@ transition: opacity 400ms ease-in;
 .close:hover { background: #00d9ff; }
 </style>
   
+
 <!-- <header class="header-2">
   <div class="page-header min-vh-75 relative" style="background-image: url('./assets/img/bg2.jpg')">
     <span class="mask bg-gradient-primary opacity-4"></span>
@@ -263,7 +264,9 @@ transition: opacity 400ms ease-in;
   </div>
 </section>
 
-
+<div style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FNpuLidlo78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 <!-- <section>
 <h2 style="text-align:center;">Productos mas vendidos</h2>
 <div>
@@ -297,15 +300,11 @@ transition: opacity 400ms ease-in;
   <div class="card-header bg-transparent text-sm-start text-center pt-4 pb-3 px-4">
   <h5 class="mb-1 text-white">Vestidos</h5>
   <p class="mb-3 text-sm text-white">Tenemos diferentes estilos de vestidos para ti.</p>
-  <h3 class="font-weight-bolder mt-3 text-white">
-  $35.000
-  </h3>
-  <a href="" class="btn btn-sm btn-primary w-100 border-radius-md mt-4 mb-2">Seccion De Vestidos</a>
   </div>
   <hr class="horizontal light my-0">
   <div class="card-body z-index-2">
   <div class="d-flex pb-3">
-  <span class="text-sm ps-3 text-white"> <img src="public/assets/img/vestido.png"></span>
+  <span class="text-sm ps-3 text-white"> <img src="public/assets/img/ves.png" style="height: 360px;"></span>
   </div>
   </div>
   </div>
@@ -315,15 +314,11 @@ transition: opacity 400ms ease-in;
   <div class="card-header text-sm-start text-center pt-4 pb-3 px-4">
   <h5 class="mb-1">Pants</h5>
   <p class="mb-3 text-sm">Obtienes mucha comodidad y te ves preciosa.</p>
-  <h3 class="font-weight-bolder mt-3">
-  $70.000
-  </h3>
-  <a href="" class="btn btn-sm bg-gradient-dark w-100 border-radius-md mt-4 mb-2">Seccion de Pants</a>
   </div>
   <hr class="horizontal dark my-0">
   <div class="card-body">
   <div class="d-flex pb-3">
-  <span class="text-sm ps-3"><img src="public/assets/img/pantalon.png"></span>
+  <span class="text-sm ps-3"><img src="public/assets/img/chaqueta.png" style="height: 360px;"></span>
   </div>
   </div>
   </div>
@@ -333,15 +328,11 @@ transition: opacity 400ms ease-in;
   <div class="card-header bg-transparent text-sm-start text-center pt-4 pb-3 px-4 z-index-2">
   <h5 class="mb-1 text-white">Conjuntos</h5>
   <p class="mb-3 text-sm text-white">Perfectas para resaltar tu belleza pura.</p>
-  <h3 class="font-weight-bolder mt-3 text-white">
-  $30.000
-  </h3>
-  <a href="" class="btn btn-sm btn-primary w-100 border-radius-md mt-4 mb-2">Seccion de camisas</a>
   </div>
   <hr class="horizontal light my-0">
   <div class="card-body z-index-2">
   <div class="d-flex pb-3">
-  <span class="text-sm ps-3 text-white"><img src="public/assets/img/conjunto.png"></span>
+  <span class="text-sm ps-3 text-white"><img src="public/assets/img/corset.png" style="height: 335px;"></span>
   </div>
   </div>
   </div>
