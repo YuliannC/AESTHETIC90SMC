@@ -18,7 +18,7 @@ class administrador_controlador{
         
     }
     public function  listarPQR(){
-        //$this->vista->datos = cliente_modelo::mdlListar();
+        $this->vista->datos = administrador_modelo::mdlListar();
         $this->vista->unirContenido("administrador/pqr");
         
     }

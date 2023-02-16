@@ -44,7 +44,7 @@ class administrador_modelo{
     public static function mdlListar(){
       $o = new conexion();
       $c = $o->getConexion();
-      $sql = "SELECT * FROM t_clientes";
+      $sql = "SELECT * FROM t_contacto";
       $s = $c->prepare($sql); 
       $s->execute();  
       return $s->fetchAll();

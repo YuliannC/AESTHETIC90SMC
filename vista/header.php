@@ -32,7 +32,7 @@
 				<ul id="navigation">
 					<li><a href="index.php">Inicio</a></li>
 					<li><a href="?controlador=productos&accion=prendas">Prendas</a></li>
-					<li><a href="?controlador=administrador&accion=contactanos">Contactanos</a></li>
+					<li><a href="?controlador=administrador&accion=contactanos">Pqr</a></li>
 					<li><a href="contact.html"></a></li>
 				</ul>
 			</nav>
