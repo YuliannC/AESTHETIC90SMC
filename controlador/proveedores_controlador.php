@@ -22,6 +22,10 @@ class proveedores_controlador{
         //  if($_SESSION['CLI_ROL'] == "Administrador" ||
         //         $_SESSION['CLI_ROL'] == "Mecanico")
     }
+    public function listar(){
+        $this->vista->datos = proveedores_modelo::mdlListar();
+        $this->vista->unirContenido("proveedores/listar");
+    }
     
     public function registrar(){
         extract($_POST);

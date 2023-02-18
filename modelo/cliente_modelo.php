@@ -44,7 +44,7 @@ class cliente_modelo{
     public static function mdlListar(){
       $o = new conexion();
       $c = $o->getConexion();
-      $sql = "SELECT * FROM t_clientes";
+      $sql = "SELECT * FROM t_usuario";
       $s = $c->prepare($sql); 
       $s->execute();  
       return $s->fetchAll();
@@ -52,7 +52,7 @@ class cliente_modelo{
   public static function mdlEliminar($datos){
     $o = new conexion();
     $c = $o->getConexion();
-    $sql = "UPDATE t_clientes SET CLI_ESTADO = 2 WHERE CLI_ID = ?";
+    $sql = "UPDATE t_usuario SET USU_ESTADO = 2 WHERE USU_ID = ?";
     $s = $c->prepare($sql);
     $v = array($datos);        
     return $s->execute($v);

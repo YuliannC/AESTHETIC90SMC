@@ -107,51 +107,48 @@ input[type="submit"]:hover {
         </div>
       </div>
       </div> -->
-      <br><br><br>
+      <br><br><br><br><br><br>
       <div class="content">
-
-        <h1 class="logo">Peticiones,Quejas y sugerencias <span>Pqr</span></h1>
 
         <div class="contact-wrapper animated bounceInUp">
             <div class="contact-form">
-                <h3>Contact us</h3>
-                <form action="">
+                <h3>Quejas, peticiones o sugerencias</h3>
+                <form action="?controlador=administrador&accion=RegistrarPqr" autocomplete="off" id="frmRegistro" method="post">
                     <p>
-                        <label>FullName</label>
-                        <input type="text" name="fullname">
+                        <label>nombres</label>
+                        <input type="text" name="nombres">
                     </p>
                     <p>
-                        <label>Email Adress</label>
-                        <input type="email" name="email">
+                        <label>apellidos</label>
+                        <input type="text" name="apellidos">
                     </p>
                     <p>
-                        <label>Phone Number</label>
-                        <input type="tel" name="phone">
+                        <label>whatsapp</label>
+                        <input type="tel" name="whatsapp">
                     </p>
                     <p>
-                        <label>Affair</label>
-                        <input type="text" name="affair">
+                        <label>correo</label>
+                        <input type="email" name="correo">
                     </p>
                     <p class="block">
-                       <label>Message</label> 
-                        <textarea name="message" rows="3"></textarea>
+                       <label>Descripcion</label> 
+                        <textarea name="mensaje" rows="3"></textarea>
                     </p>
                     <p class="block">
-                        <button>
-                            Send
+                        <button name="aceptar">
+                            Enviar
                         </button>
                     </p>
                 </form>
             </div>
             <div class="contact-info">
-                <h4>More Info</h4>
+                <h4>Para mas informacion</h4>
                 <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> Baker Street</li>
-                    <li><i class="fas fa-phone"></i> (111) 111 111 111</li>
-                    <li><i class="fas fa-envelope-open-text"></i> contact@website.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Escribenos</li>
+                    <li><i class="fas fa-phone"></i> (+57) 302 687 6413</li>
                 </ul>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero provident ipsam necessitatibus repellendus?</p>
-                <p>Company.com</p>
+                <p>Estamos para atender tus necesidades como usuario y tengas una experiencia increible en este tu espacio. </p>
+                <p>Gracias por preferirnos</p>
             </div>
         </div>
 
@@ -187,7 +184,7 @@ ul {
 }
 
 .contact-form {
-    background: #222222;
+    background: gray;
 }
 
 .contact-form form {
@@ -216,12 +213,12 @@ ul {
     border: none;
     background: none;
     outline: 0;
-    color: #fff;
-    border-bottom: 1px solid #d63031;
+    color: white;
+    border-bottom: 1px solid black;
 }
 
 .contact-form form button {
-    background: #B70E21;
+    background: black;
     border: 0;
     text-transform: uppercase;
     padding: 1em;
@@ -229,8 +226,8 @@ ul {
 
 .contact-form form button:hover,
 .contact-form form button:focus {
-    background: #d63031;
-    color: #fff;
+    background: pink;
+    color: white;
     transition: background-color 1s ease-out;
     outline: 0;
 }
@@ -261,6 +258,10 @@ ul {
     .contact-info ul,
     .contact-info p {
         text-align: left;
+        color: white; 
+    }
+    label{
+        color: white;
     }
 }
     </style>

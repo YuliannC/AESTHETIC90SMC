@@ -31,9 +31,9 @@
 	width: 750px;
 	position: relative;
 	margin: 10% auto;
-	padding: 5px 10px 13px 20px;
+	padding: 1px 1px 1px 1px;
 	border-radius: 10px;
-	background: #fff;
+	background: transparent;
 	background: -moz-linear-gradient(#fff, #999);
 	background: -webkit-linear-gradient(#fff, #999);
 	background: -o-linear-gradient(#fff, #999);
@@ -63,7 +63,7 @@ transition: opacity 400ms ease-in;
 *{box-sizing:border-box;}
 
 form{
-	width:700px;
+	width:730px;
 	padding:16px;
 	border-radius:10px;
 	margin:auto;
@@ -150,7 +150,7 @@ textarea{
             <div class="btn-group" role="group">
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<div class="button extra_2_button" style="text-align: center;" ><a href="#openModal">Registrar</a></div>&nbsp;&nbsp;&nbsp;
-			<div class="button extra_2_button"><a href="checkout.html">Listar</a></div>&nbsp;&nbsp;&nbsp;	
+			<div class="button extra_2_button"><a href="?controlador=cliente&accion=listar">Listar</a></div>&nbsp;&nbsp;&nbsp;	
 			<div class="extra_2_button"> <input type="text" placeholder="Buscar por nombre" class="buscar"> </div>&nbsp;&nbsp;&nbsp;
 			<div class="extra_2_button"> <input type="submit" class="search_button" value=""><img src="public/images/magnifying-glass.svg" alt="">			
             </div>
@@ -165,25 +165,24 @@ textarea{
 
 			<form action="?controlador=cliente&accion=Registrar" autocomplete="off" id="frmReg" method="post" name="formDatosPersonales">
 			<h2 style="color:black; text-align:center;">Registrar Clientes</h2>
-					<br>	
+						
 			<label for="nombre">nombres</label>
 			<input type="text" name="nombres" id="nombres" placeholder="nombres"/>
-			<br><br>
+			<br>
 			<label for="nombre">apellidos</label>
 			<input type="text" name="apellidos" id="apellidos" placeholder="apellidos"/>
-			<br><br>
+			<br>
 			<label for="apellidos">Telefono</label>
 			<input type="number" name="telefono" id="telefono" placeholder="telefono"/>
-			<br><br>
+			<br>
 			<label for="email" >correo</label>
 			<input type="email" name="correo" id="correo" placeholder="correo" required />
-			<br><br>
+			<br>
 			<label for="asunto">contrasena</label>
 			<input type ="text" name="contrasena" id="contrasena" placeholder="contrasena"/>
-			<br><br>
+			<br>
 			<label for="asunto">Repetir contrasena</label>
 			<input type ="text" name="contrasena" id="contrasena" placeholder="contrasena"/>
-
 			<input type="submit" name="enviar" value="enviar datos">
 
 			</form>
