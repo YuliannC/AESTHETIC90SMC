@@ -56,12 +56,11 @@ class cliente_controlador{
         $datos["password"] = $password;
         $r=cliente_modelo::mdlvalidar($datos);
         if($r > 0){
-            $_SESSION["CLI_NOMBRES"]   =$r["CLI_NOMBRES"];
-            $_SESSION["CLI_APELLIDOS"] =$r["CLI_APELLIDOS"];
-            $_SESSION["CLI_ROL"]       =$r["CLI_ROL"];
-            $_SESSION["CLI_ID"]        =$r["CLI_ID"];
+            $_SESSION["USU_NOMBRES"]   =$r["USU_NOMBRES"];
+            $_SESSION["USU_APELLIDOS"] =$r["USU_APELLIDOS"];
+            $_SESSION["USU_TELEFONO"]  =$r["USU_TELEFONO"];
             echo json_encode(array(
-                "mensaje" => "ashly", 
+                "mensaje" => "yulianna", 
                 "icono" => "succes", 
                 "URL" => "?controlador=inicio&accion=principal"));
         }else{
@@ -107,12 +106,17 @@ class cliente_controlador{
   }
   public function editar(){
     extract($_POST);
-    $datos["nombres"]    = $nombres;
-    $datos["apellidos"]  = $apellidos;
-    $datos["documento"]  = $documento;
-    $datos["rol"]        = $rol;
-    $datos["codigo"]     = $codigo;
-    $datos["id"]         = $id;
+    $datos["USU_NOMBRES"] = $nombres;
+    $datos["USU_APELLIDOS"] = $apellidos;
+    $datos["USU_TELEFONO"] = $telefono;
+    $datos["USU_CORREO"] = $correo;
+    $datos["USU_CONTRASENA"]  = $contrasena;
+    $datos["USU_ROL"]  = $srol;
+    $datos["USU_ID
+    
+    
+    
+    "]  = $cli_id;
     $r = cliente_modelo::mdleditar($datos);
     if( $r > 0){
         echo json_encode(array("mensaje" => "Editado Correctamente" , "icono"=>"success"));

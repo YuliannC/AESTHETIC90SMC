@@ -59,10 +59,10 @@ class administrador_controlador{
         extract($_POST);
         $datos["cli_id"]    = $cli_id;
         $datos["nombres"]   = $nombres;
-        $datos["srol"]      = $srol;
         $datos["apellidos"] = $apellidos;
-        $datos["documento"] = $documento;
-        $datos["codigo"]    = $codigo;
+        $datos["whatsapp"] = $whatsapp;
+        $datos["correo"]    = $correo;
+        $datos["mensaje"]    = $mensaje;
         $rpta = administrador_modelo::mdlEditar($datos);
         if($rpta > 0){
         echo json_encode(array("mensaje" => "Cliente actualizado",

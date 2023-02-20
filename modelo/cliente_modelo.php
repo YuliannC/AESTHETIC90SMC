@@ -15,7 +15,7 @@ class cliente_modelo{
     public static function mdlBuscarXID($cli_id){
         $o = new conexion();
         $c = $o->getConexion();
-        $sql = "SELECT * FROM t_clientes WHERE CLI_ID = ?";
+        $sql = "SELECT * FROM t_usuario WHERE USU_ID = ?";
         $s = $c->prepare($sql);
         $v = array($cli_id);
         $s->execute($v);
@@ -23,12 +23,12 @@ class cliente_modelo{
 
     }
     //validacion de que exista el cliente
-    public static function mdlConsultarXDOC($cli_documento){
+    public static function mdlConsultarXDOC($nombres){
         $o = new conexion();
         $c = $o->getConexion();
-        $sql = "SELECT * FROM t_clientes WHERE CLI_DOCUMENTO = ?";
+        $sql = "SELECT * FROM t_usuario WHERE USU_NOMBRES = ?";
         $s = $c->prepare($sql);
-        $v = array($cli_documento);
+        $v = array($nombres);
         $s->execute($v);
         return $s->fetch();
     }
@@ -36,9 +36,9 @@ class cliente_modelo{
     public static function mdlEditar($datos){
       $o = new conexion();
       $c = $o->getConexion();
-      $sql = "UPDATE t_clientes SET CLI_NOMBRES = ?, CLI_ROL = ?, CLI_APELLIDOS = ?, CLI_CODIGO = ?, CLI_DOCUMENTO = ? WHERE CLI_ID = ?";       
+      $sql = "UPDATE t_usuario SET USU_NOMBRES = ?, USU_APELLIDOS = ?, USU_TELEFONO = ?, USU_CORREO = ?, USU_CONTRASENA = ?, , USU_ROL = ? WHERE USU_ID = ?";       
       $s = $c->prepare($sql);
-      $v = array($datos["nombres"],$datos["srol"],$datos["apellidos"],$datos["codigo"],$datos["documento"],$datos["cli_id"]);        
+      $v = array($datos["nombres"],$datos["apellidos"],$datos["telefono"],$datos["correo"],sha1($datos["contrasena"]),$datos["srol"]);        
       return $s->execute($v);
     }
     public static function mdlListar(){
@@ -70,30 +70,30 @@ class cliente_modelo{
   public static function mdlDetalles($id){
     $obj = new conexion();
     $con = $obj -> getConexion();
-    $sql = "SELECT * FROM T_CLIENTES WHERE CLI_ID = ?";
+    $sql = "SELECT * FROM t_usuario WHERE USU_ID = ?";
     $s   = $con->prepare($sql);
     $v   = array($id);
     $s->execute($v); 
     return $s->fetch();
 }
-// public static function mdlvalidar($datos){
-//   $o = new conexion();
-//   $c =$o->getConexion();
-//  $sql = "SELECT * FROM T_CLIENTES WHERE CLI_DOCUMENTO = ? AND CLI_PASS = ?";
-//   $s= $c->prepare($sql);
-//   $v= array($datos["usuario"], sha1($datos["password"]));
-//   $s-> execute($v);
-//   return $s->fetch();
-// }
 public static function mdlvalidar($datos){
-  $obj = new conexion();
-    $con = $obj -> getConexion();
-    $sql = "SELECT * FROM t_clientes WHERE CLI_DOCUMENTO= ? AND CLI_PASS=?";
-    $s   = $con->prepare($sql);
-    $v   = array($datos["usuario"], Sha1($datos["password"]));
-    $s->execute($v); 
-    return $s->fetch();
+  $o = new conexion();
+  $c =$o->getConexion();
+ $sql = "SELECT * FROM t_usuario WHERE USU_CORREO = ? AND USU_CONTRASENA = ?";
+  $s= $c->prepare($sql);
+  $v= array($datos["usuario"], sha1($datos["password"]));
+  $s-> execute($v);
+  return $s->fetch();
 }
+// public static function mdlvalidar($datos){
+//   $obj = new conexion();
+//     $con = $obj -> getConexion();
+//     $sql = "SELECT * FROM t_usuario WHERE USU_CORREO= ? AND USU_CONTRASENA=?";
+//     $s   = $con->prepare($sql);
+//     $v   = array($datos["correo"], Sha1($datos["contrasena"]));
+//     $s->execute($v); 
+//     return $s->fetch();
+// }
 
 }
 ?>

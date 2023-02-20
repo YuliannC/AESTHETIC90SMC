@@ -6,9 +6,9 @@ class inicio_controlador{
     }
 
     public function index(){
-        $this->vista->unirContenido("inicio/principal");
-        // $this->vista->unirContenido("inicio/frmLogin",false);
-    }
+      $this->vista->unirContenido("inicio/login",false);
+  }
+    
     public function principal(){
       // if(!isset($_SESSION["CLI_ID"])){
       //     header("location: /");

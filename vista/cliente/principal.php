@@ -163,27 +163,27 @@ textarea{
 	<div>
 		<a href="#close" title="Close" class="close" style="color:black;" >X</a>
 
-			<form action="?controlador=cliente&accion=Registrar" autocomplete="off" id="frmReg" method="post" name="formDatosPersonales">
+			<form action="?controlador=cliente&accion=Registrar" autocomplete="off" id="frmReg" method="post" >
 			<h2 style="color:black; text-align:center;">Registrar Clientes</h2>
 						
 			<label for="nombre">nombres</label>
-			<input type="text" name="nombres" id="nombres" placeholder="nombres"/>
+			<input type="text" name="nombres" id="nombres" placeholder="nombres" required/>
 			<br>
 			<label for="nombre">apellidos</label>
-			<input type="text" name="apellidos" id="apellidos" placeholder="apellidos"/>
+			<input type="text" name="apellidos" id="apellidos" placeholder="apellidos" required/>
 			<br>
 			<label for="apellidos">Telefono</label>
-			<input type="number" name="telefono" id="telefono" placeholder="telefono"/>
+			<input type="number" name="telefono" id="telefono" placeholder="telefono" required/>
 			<br>
 			<label for="email" >correo</label>
 			<input type="email" name="correo" id="correo" placeholder="correo" required />
 			<br>
 			<label for="asunto">contrasena</label>
-			<input type ="text" name="contrasena" id="contrasena" placeholder="contrasena"/>
+			<input type ="text" name="contrasena" id="contrasena" placeholder="contrasena" required/>
 			<br>
 			<label for="asunto">Repetir contrasena</label>
-			<input type ="text" name="contrasena" id="contrasena" placeholder="contrasena"/>
-			<input type="submit" name="enviar" value="enviar datos">
+			<input type ="text" name="contrasena" id="contrasena" placeholder="contrasena"required />
+			<input type="submit" name="aceptar" value="enviar datos">
 
 			</form>
             </div>

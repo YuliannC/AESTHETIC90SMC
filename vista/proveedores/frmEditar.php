@@ -45,7 +45,7 @@ $var = $this->dato["CLI_ROL"];
                           <option value="">Rol</option>
                           <option <?php echo $var =="Administrador"?"selected":"";?> value="Administrador">Admin</option>
                           <option <?php echo $var =="Cliente"?"selected":"";?>  value="Cliente">Cliente</option>                        </select>
-                  <input type="hidden" name="id" value="<?php echo $this->dato["USU_ID"];?>" required>
+                  <input type="hidden" name="prov_id" value="<?php echo $this->dato["USU_ID"];?>" required>
                     </div>
                     <input type="submit" name="aceptar" class="btn bg-gradient-primary">
                     </form>

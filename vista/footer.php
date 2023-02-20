@@ -27,7 +27,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		</div>
 	</footer>
 </div>
-<script src="public/js/scripts.js"></script>
+<script type="text/javascript"  src="public/js/scripts.js"></script>
 <script src="public/js/jquery-3.2.1.min.js"></script>
 <script src="public/styles/bootstrap4/popper.js"></script>
 <script src="public/styles/bootstrap4/bootstrap.min.js"></script>
@@ -36,5 +36,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="public/plugins/parallax-js-master/parallax.min.js"></script>
 <script src="public/plugins/colorbox/jquery.colorbox-min.js"></script>
 <script src="public/js/custom.js"></script>
+
 </body>
 </html>

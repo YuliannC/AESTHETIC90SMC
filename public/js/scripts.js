@@ -1,4 +1,4 @@
-$(function () {
+(function () {
     $("#frmReg").submit(function(){
         var datos   = $(this).serialize();
         var url     = $(this).attr("action");

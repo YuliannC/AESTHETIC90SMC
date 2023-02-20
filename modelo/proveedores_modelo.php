@@ -15,7 +15,7 @@ class proveedores_modelo{
     public static function mdlBuscarXID($cli_id){
         $o = new conexion();
         $c = $o->getConexion();
-        $sql = "SELECT * FROM t_clientes WHERE CLI_ID = ?";
+        $sql = "SELECT * FROM t_proveedores WHERE PROV_ID = ?";
         $s = $c->prepare($sql);
         $v = array($cli_id);
         $s->execute($v);
