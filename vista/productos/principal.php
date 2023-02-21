@@ -135,7 +135,7 @@ textarea{
 
 		<nav class="menu_nav">
 			<ul class="menu_mm">
-				<li class="menu_mm"><a href="#">Inicio</a></li>
+				<li class="menu_mm"><a href="?controlador=administrador&accion=principal">Inicio</a></li>
 				<li class="menu_mm"><a href="?controlador=cliente&accion=principal">Clientes</a></li>
 				<li class="menu_mm"><a href="?controlador=proveedores&accion=principal">Proveedores</a></li>
 				<li class="menu_mm"><a href="?controlador=productos&accion=principal">Productos</a></li>
@@ -144,7 +144,7 @@ textarea{
 		</nav>
 	</div>
   
-  <img src="public/images/administra.jpeg" alt="">
+  <img src="public/images/xxx.jpg" alt="">
   <div class="row">
         <div class="col-md-3 col-md-offset-9 text-right" >
             <div class="btn-group" role="group">

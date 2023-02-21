@@ -13,7 +13,7 @@
 			<ul class="menu_mm">
 				<li class="menu_mm"><a href="#">Inicio</a></li>
 				<li class="menu_mm"><a href="?controlador=cliente&accion=principal">Prendas</a></li>
-				<li class="menu_mm"><a href="#">Atencion personalizada</a></li>
+				<li class="menu_mm"><a href="https://api.whatsapp.com/send?phone=573026876413&text=Hola!!%20Quiero%20hacer%20un%20pedido%20o%20tengo%20una%20consulta%20%E2%9C%A8">Atencion personalizada</a></li>
 				<li class="menu_mm"><a href="#">Lo mas vendido</a></li>
 				<li class="menu_mm"><a href="?controlador=administrador&accion=contactanos">PQR</a></li>
 			</ul>

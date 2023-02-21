@@ -16,7 +16,7 @@
 <link rel="stylesheet" type="text/css" href="public/styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="public/styles/responsive.css">
 <link rel="stylesheet" type="text/css" href="public/styles/principal.css">
-<link rel="stylesheet" href="public/js/scripts.js">
+<link rel="stylesheet" type="" href="public/js/scripts.js">
 
 </head>
 <body>
@@ -30,7 +30,7 @@
 			<div class="logo"><a href="#">Aesthetic90s</a></div>
 			<nav class="main_nav">
 				<ul id="navigation">
-					<li><a href="index.php">Inicio</a></li>
+					<li><a href="?controlador=inicio&accion=principal">Inicio</a></li>
 					<li><a href="?controlador=productos&accion=prendas">Prendas</a></li>
 					<li><a href="?controlador=administrador&accion=contactanos">Pqr</a></li>
 					<li><a href="contact.html"></a></li>
@@ -64,15 +64,15 @@
 						</div>
 					</a>
 					<!-- Avatar -->
-					<a href="?controlador=cliente&accion=perfiles">
+					<!-- <a href="?controlador=cliente&accion=perfiles">
 						<div class="avatar">
 							<img src="public/images/avatar.svg" alt="">
 							
 							
 						</div>
 						
-					</a>
-					<a href="?controlador=cliente&accion=frmRegistro">
+					</a> -->
+					<a href="?controlador=inicio&accion=index">
 						<div class="avatar">
 							<img src="public/images/avatar.svg" alt="">
 							

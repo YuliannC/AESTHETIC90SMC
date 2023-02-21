@@ -106,17 +106,13 @@ class cliente_controlador{
   }
   public function editar(){
     extract($_POST);
-    $datos["USU_NOMBRES"] = $nombres;
-    $datos["USU_APELLIDOS"] = $apellidos;
-    $datos["USU_TELEFONO"] = $telefono;
-    $datos["USU_CORREO"] = $correo;
-    $datos["USU_CONTRASENA"]  = $contrasena;
-    $datos["USU_ROL"]  = $srol;
-    $datos["USU_ID
-    
-    
-    
-    "]  = $cli_id;
+    $datos["usu_nombres"] = $nombres;
+    $datos["usu_apellidos"] = $apellidos;
+    $datos["usu_telefono"] = $telefono;
+    $datos["usu_correo"] = $correo;
+    $datos["usu_contrasena"]  = $contrasena;
+    $datos["usu_rol"]  = $srol;
+    $datos["usu_id"]  = $id;
     $r = cliente_modelo::mdleditar($datos);
     if( $r > 0){
         echo json_encode(array("mensaje" => "Editado Correctamente" , "icono"=>"success"));

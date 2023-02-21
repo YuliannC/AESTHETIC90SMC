@@ -1,5 +1,5 @@
 <br><br><br><br>
-<div class="container" id="container">
+<div class="container" id="container" style=" margin: 0 auto;">
             <div class="form-container sign-up-container">
                 <form action="#">
                     <h1>Registrarse</h1>
@@ -17,7 +17,7 @@
             </div>
             <div class="form-container sign-in-container">
                 <form id="frmLogin"
-                    action="?controlador=cliente&accion=validar" method="POST">
+                    action="?controlador=cliente&accion=perfiles" method="POST">
                     <h1>Ingresar</h1>
                     <div class="social-container">
                         <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -39,8 +39,8 @@
                         <button class="ghost" id="signIn">Sign In</button>
                     </div>
                     <div class="overlay-panel overlay-right">
-                        <h1>Bienvenido, Amig@</h1>
-                        <p>Aun no estas registrad@?</p>
+                        <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bienvenido</h1>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aun no estas registrada?</p>
                         <button class="ghost" id="signUp">Registrarse</button>
                     </div>
                 </div>

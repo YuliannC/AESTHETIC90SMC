@@ -111,6 +111,7 @@ th, td {
 }
     </style> -->
 <br><br>
+<title>LISTA DE PQR</title>
     <div class="ol-lg-8">
                 <div class="card">
                   <div class="bg-gradient-dark shadow-dark border-radius-lg pt-4 pb-3">

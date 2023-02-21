@@ -1,59 +1,97 @@
+<br><br><br><br><br><br>
 <?php
-$var = $this->dato["CLI_ROL"];
+$var = $this->dato["USU_ROL"];
 ?>
-<div class="container-fluid py-4">
-      <div class="row">
-        <div class="col-12">
-          <div class="card my-4">
-            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-              <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-              <br><br><br><br>
-                <h6 class="text-white text-capitalize ps-3">REGISTRO DE CLIENTES</h6>
-              </div>
-            </div>
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-lg-3">
-                    <form action="?controlador=cliente&accion=editar" autocomplete="off" id="frmRegistro" method="post">
-                   
-                    <div class="input-group input-group-outline mb-3">
-                    <label class="form-label">Nombres</label>
-                    <input type="text" name="nombres" class="form-control" value="<?php echo $this->datos["USU_NOMBRES"];?>">
-                    </div>
-
-                    <div class="input-group input-group-outline mb-3">
-                    <label class="form-label">Apellidos</label>
-                    <input type="text" name="apellidos" class="form-control" value="<?php echo $this->dato["USU_APELLIDOS"];?>">
-                    </div>
-
-                    <div class="input-group input-group-outline mb-3">
-                    <label class="form-label">telefono</label>
-                    <input type="number" name="telefono" class="form-control" value="<?php echo $this->dato["USU_TELEFONO"];?>">
-                    </div>
-
-                    <div class="input-group input-group-outline mb-3">
-                    <label class="form-label">Correo</label>
-                    <input type="text" name="correo" class="form-control" value="<?php echo $this->dato["USU_CORREO"];?>">
-                    </div>
-
-                    <div class="input-group input-group-outline mb-3">
-                    <label class="form-label">contraseña</label>
-                    <input type="number" name="contrasena" class="form-control" value="<?php echo $this->dato["USU_CONTRASENA"];?>">
-                    </div>
-                
-                    <select class= "form-control"name="srol" id="" value="<?php echo $this->dato["USU_ROL"];?>" required>
+<form action="?controlador=cliente&accion=editar" autocomplete="off" id="frmRegistro" method="post">
+			<h2 style="color:black; text-align:center;">Registrar Clientes</h2>
+						
+			<label for="nombre">nombres</label>
+			<input type="text" name="nombres"  placeholder="nombres" required value="<?php echo $this->datos["USU_NOMBRES"];?>"/>
+			<br>
+			<label for="nombre">apellidos</label>
+			<input type="text" name="apellidos"  placeholder="apellidos" required value="<?php echo $this->dato["USU_APELLIDOS"];?>"/>
+			<br>
+			<label for="apellidos">Telefono</label>
+			<input type="number" name="whatsapp"  placeholder="telefono" required value="<?php echo $this->dato["USU_TELEFONO"];?>"/>
+			<br>
+			<label for="email" >correo</label>
+			<input type="email" name="correo"  placeholder="correo" required value="<?php echo $this->dato["USU_CORREO"];?>"/>
+			<br>
+			<label for="asunto">contrasena</label>
+			<input type ="text" name="contrasena"  placeholder="contrasena" required value="<?php echo $this->dato["USU_CONTRASENA"];?>"/>
+			<br>
+			<select class= "form-control"name="srol" value="<?php echo $this->dato["USU_ROL"];?>" required>
                           <option value="">Rol</option>
                           <option <?php echo $var =="Administrador"?"selected":"";?> value="Administrador">Admin</option>
-                          <option <?php echo $var =="Cliente"?"selected":"";?>  value="Cliente">Cliente</option>                        </select>
-                  <input type="hidden" name="id" value="<?php echo $this->dato["USU_ID"];?>" required>
-                    </div>
-                    <input type="submit" name="aceptar" class="btn bg-gradient-primary">
-                    </form>
-                </div>
-                </div>
-             
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
+                          <option <?php echo $var =="Cliente"?"selected":"";?>  value="Cliente">Cliente</option>   
+                           </select>
+     <input type="hidden" name="id" value="<?php echo $this->dato["USU_ID"];?>" required>
+
+      <input type="submit" name="aceptar" class="btn bg-gradient-primary" value="enviar">
+			</form>
+
+      <style>
+        
+form{
+	width:730px;
+	padding:16px;
+	border-radius:10px;
+	margin:auto;
+	background-color:#ccc;
+}
+
+form label{
+	width:72px;
+	font-weight:bold;
+	display:inline-block;
+}
+
+form input[type="number"],
+form input[type="text"],
+form input[type="email"]{
+	width:340px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
+}
+
+form input[type="submit"]{
+	width:100%;
+	padding:8px 16px;
+	margin-top:32px;
+	border:1px solid #000;
+	border-radius:5px;
+	display:block;
+	color: black;
+	background-color: gray;
+} 
+
+form input[type="submit"]:hover{
+	cursor:pointer;
+}
+
+textarea{
+	width:100%;
+	height:100px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;			
+	margin:8px 0;
+	/*resize: vertical | horizontal | none | both*/
+	resize:none;
+	display:block;
+}
+.buscar{
+	width:340px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
+}
+
+      </style>
