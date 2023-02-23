@@ -139,7 +139,7 @@ textarea{
 				<li class="menu_mm"><a href="?controlador=cliente&accion=principal">Clientes</a></li>
 				<li class="menu_mm"><a href="?controlador=proveedores&accion=principal">Proveedores</a></li>
 				<li class="menu_mm"><a href="?controlador=productos&accion=principal">Productos</a></li>
-				<li class="menu_mm"><a href="?controlador=administrador&accion=contactanos">PQR</a></li>
+				<li class="menu_mm"><a href="?controlador=administrador&accion=listarPQR">PQR</a></li>
 			</ul>
 		</nav>
 	</div>

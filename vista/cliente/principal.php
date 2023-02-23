@@ -129,6 +129,8 @@ textarea{
 
 <!-- Menu -->
 
+<!-- Menu -->
+
 <div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
 		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
 		<div class="logo menu_mm"><a href="#">Aesthetic 90s Mc</a></div>
@@ -139,10 +141,12 @@ textarea{
 				<li class="menu_mm"><a href="?controlador=cliente&accion=principal">Clientes</a></li>
 				<li class="menu_mm"><a href="?controlador=proveedores&accion=principal">Proveedores</a></li>
 				<li class="menu_mm"><a href="?controlador=productos&accion=principal">Productos</a></li>
-				<li class="menu_mm"><a href="?controlador=administrador&accion=contactanos">PQR</a></li>
+				<li class="menu_mm"><a href="?controlador=administrador&accion=listarPQR">PQR</a></li>
 			</ul>
 		</nav>
 	</div>
+
+	<!-- FIN DE MENU -->
   
   <img src="public/images/xxx.jpg" alt="">
   <div class="row">
