@@ -154,3 +154,4 @@ class administrador_controlador{
         $this->vista->unirContenido("cliente/ReporteClientes", false);
     }
 }
+?>

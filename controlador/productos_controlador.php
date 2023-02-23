@@ -129,3 +129,4 @@ class productos_controlador{
         echo json_encode(array("mensaje"=> $tbl));
     }
 }
+?>

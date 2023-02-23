@@ -86,6 +86,15 @@ form input[type="email"]{
 	margin:8px 0;
 	display:inline-block;
 }
+.seleccion{
+	width:340px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
+}
 
 form input[type="submit"]{
 	width:100%;
@@ -176,8 +185,15 @@ textarea{
 			<input type="text" name="direccion" id="direccion" placeholder="direccion" required />
 			<br><br>
 			<label for="asunto">Seccion</label>
-			<input type ="text" name="seccion" id="seccion" placeholder="seccion"/>
-
+			<select class= "seleccion" name="seccion" required>
+              <option value="">Selecciona</option>
+              <option value="Administrador">Tops</option>
+              <option  value="Cliente">Pants</option>
+			  <option value="Administrador">Vestidos</option>
+              <option  value="Cliente">Falda</option>  
+			  <option  value="Cliente">Conjunto</option>      
+            </select>
+						
 			<input type="submit" name="enviar" value="enviar datos">
 
 			</form>

@@ -178,12 +178,15 @@ textarea{
 			<label for="email" >correo</label>
 			<input type="email" name="correo" id="correo" placeholder="correo" required />
 			<br>
+			<select class= "form-control"name="srol" value="<?php echo $this->dato["USU_ROL"];?>" required>
+              <option value="">Rol</option>
+              <option value="Administrador">Admin</option>
+              <option  value="Cliente">Cliente</option>   
+            </select>
+			<br>
 			<label for="asunto">contrasena</label>
 			<input type ="text" name="contrasena" id="contrasena" placeholder="contrasena" required/>
-			<br>
-			<label for="asunto">Repetir contrasena</label>
-			<input type ="text" name="contrasena" id="contrasena" placeholder="contrasena"required />
-			<input type="submit" name="aceptar" value="enviar datos">
+			<input type="submit" name="aceptar" value="enviar">
 
 			</form>
             </div>

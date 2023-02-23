@@ -1,12 +1,12 @@
 <?php
 require_once "modelo/cliente_modelo.php";
 class cliente_controlador{
+    public function __construct(){
+        $this->vista = new estructura();
+    }
     public function index(){
         $this->vista->datos = cliente_modelo::mdlListar();
         $this->vista->unirContenido("cliente/principal");
-    }
-    public function __construct(){
-        $this->vista = new estructura();
     }
     public function principal(){
       //  $this->vista->datos=cliente_modelo::mdlListar();
@@ -15,7 +15,7 @@ class cliente_controlador{
     public function perfiles(){
         //  $this->vista->datos=cliente_modelo::mdlListar();
           $this->vista->unirContenido("cliente/perfil"); 
-      }
+    }
     public function login(){
         //  $this->vista->datos=cliente_modelo::mdlListar();
           $this->vista->unirContenido("inicio/login"); 
@@ -129,9 +129,5 @@ class cliente_controlador{
         echo json_encode(array("mensaje" => "No se  elimino cliente " ,"icono"=>"Error"));
     }
  }
-
-} 
-   
-
+}
 ?>
-
