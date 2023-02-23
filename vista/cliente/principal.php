@@ -1,66 +1,66 @@
 
-<style>
-  h1{
-    text-align: center;
-  }
-  img{
-    text-align: center;
-    width: 100%;
-  }
-  .modalDialog {
-	position: fixed;
-	font-family: Arial, Helvetica, sans-serif;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: rgba(0,0,0,0.8);
-	z-index: 99999;
-	opacity:0;
+	<style>
+	h1{
+		text-align: center;
+	}
+	img{
+		text-align: center;
+		width: 100%;
+	}
+	.modalDialog {
+		position: fixed;
+		font-family: Arial, Helvetica, sans-serif;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0,0,0,0.8);
+		z-index: 99999;
+		opacity:0;
+		-webkit-transition: opacity 400ms ease-in;
+		-moz-transition: opacity 400ms ease-in;
+		transition: opacity 400ms ease-in;
+		pointer-events: none;
+		text-align: center;
+	}
+	.modalDialog:target {
+		opacity:1;
+		pointer-events: auto;
+	}
+	.modalDialog > div {
+		width: 750px;
+		position: relative;
+		margin: 10% auto;
+		padding: 1px 1px 1px 1px;
+		border-radius: 10px;
+		background: transparent;
+		background: -moz-linear-gradient(#fff, #999);
+		background: -webkit-linear-gradient(#fff, #999);
+		background: -o-linear-gradient(#fff, #999);
 	-webkit-transition: opacity 400ms ease-in;
 	-moz-transition: opacity 400ms ease-in;
 	transition: opacity 400ms ease-in;
-	pointer-events: none;
-	text-align: center;
-}
-.modalDialog:target {
-	opacity:1;
-	pointer-events: auto;
-}
-.modalDialog > div {
-	width: 750px;
-	position: relative;
-	margin: 10% auto;
-	padding: 1px 1px 1px 1px;
-	border-radius: 10px;
-	background: transparent;
-	background: -moz-linear-gradient(#fff, #999);
-	background: -webkit-linear-gradient(#fff, #999);
-	background: -o-linear-gradient(#fff, #999);
-  -webkit-transition: opacity 400ms ease-in;
--moz-transition: opacity 400ms ease-in;
-transition: opacity 400ms ease-in;
-}
-.close {
-	background: white;
-	color: black;
-	line-height: 25px;
-	position: absolute;
-	right: -12px;
-	text-align: center;
-	top: -10px;
-	width: 24px;
-	text-decoration: none;
-	font-weight: bold;
-	-webkit-border-radius: 12px;
-	-moz-border-radius: 12px;
-	border-radius: 12px;
-	-moz-box-shadow: 1px 1px 3px #000;
-	-webkit-box-shadow: 1px 1px 3px #000;
-	box-shadow: 1px 1px 3px #000;
-}
-.close:hover { background: white; }
-*{box-sizing:border-box;}
+	}
+	.close {
+		background: white;
+		color: black;
+		line-height: 25px;
+		position: absolute;
+		right: -12px;
+		text-align: center;
+		top: -10px;
+		width: 24px;
+		text-decoration: none;
+		font-weight: bold;
+		-webkit-border-radius: 12px;
+		-moz-border-radius: 12px;
+		border-radius: 12px;
+		-moz-box-shadow: 1px 1px 3px #000;
+		-webkit-box-shadow: 1px 1px 3px #000;
+		box-shadow: 1px 1px 3px #000;
+	}
+	.close:hover { background: white; }
+	*{box-sizing:border-box;}
 
 form{
 	width:730px;
@@ -163,7 +163,7 @@ textarea{
 	<div>
 		<a href="#close" title="Close" class="close" style="color:black;" >X</a>
 
-			<form action="?controlador=cliente&accion=Registrar" autocomplete="off" id="frmReg" method="post" >
+			<form action="?controlador=cliente&accion=Registrar" autocomplete="off" id="frmRegistrar" method="post" >
 			<h2 style="color:black; text-align:center;">Registrar Clientes</h2>
 						
 			<label for="nombre">nombres</label>

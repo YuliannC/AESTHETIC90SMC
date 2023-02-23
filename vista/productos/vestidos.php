@@ -7,12 +7,7 @@
     box-sizing: border-box;
 }
 
-body{
-    margin: 0 auto;
-    max-width: 1200px;
-    font-family: 'Lato';
-    color: #333;
-}
+
 
 .icon-cart{
     width: 40px;
@@ -136,8 +131,6 @@ header{
 }
 
 
-
-
 /* Main */
 .container-items{
     display: grid;
@@ -201,7 +194,7 @@ header{
     display: none;
 }</style>
 
-
+<!-- CARRO DE COMPRAS -->
 <br><br><br><br><br><br>
 <div class="container-icon">
     <svg
@@ -255,110 +248,6 @@ header{
 <div class="item">
     <figure>
         <img
-            src="public/images/producto_1.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>Conjunto mary</h2>
-        <p class="price">$49.900</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div>
-<div class="item">
-    <figure>
-        <img
-            src="public/images/producto_2.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>Chaqueta en jean</h2>
-        <p class="price">$85.000</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div>
-<div class="item">
-    <figure>
-        <img
-            src="public/images/producto_3.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>Corst + pantalon</h2>
-        <p class="price">$120.000</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div>
-<div class="item">
-    <figure>
-        <img
-            src="public/images/producto_5.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>Smartwatch</h2>
-        <p class="price">$90</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div>
-<div class="item">
-    <figure>
-        <img
-            src="public/images/a2.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>Conjunto Hailey</h2>
-        <p class="price">$34.900</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div>
-<div class="item">
-    <figure>
-        <img
-            src="public/images/conjun.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>Conjunto Megan</h2>
-        <p class="price">$54.900</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div>
-<div class="item">
-    <figure>
-        <img
-            src="public/images/pieza.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>Conjunto Shelsee</h2>
-        <p class="price">$75.000</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div>
-<div class="item">
-    <figure>
-        <img
-            src="public/images/a1.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>Conjunto Acuerela</h2>
-        <p class="price">$73.000</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div>
-<div class="item">
-    <figure>
-        <img
             src="public/images/a5.jpeg"
             alt="producto"
         />
@@ -394,19 +283,7 @@ header{
         <button>Añadir al carrito</button>
     </div>
 </div>
-<div class="item">
-    <figure>
-        <img
-            src="public/images/b2.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>Conjunto Kourtney</h2>
-        <p class="price">$65.000</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div>
+
 <div class="item">
     <figure>
         <img
@@ -420,32 +297,7 @@ header{
         <button>Añadir al carrito</button>
     </div>
 </div>
-<div class="item">
-    <figure>
-        <img
-            src="public/images/b3.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>Pant + Top</h2>
-        <p class="price">$73.000</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div>
-<div class="item">
-    <figure>
-        <img
-            src="public/images/b4.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>Pant + Top</h2>
-        <p class="price">$59.900</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div>
+
 </div>
 </div>
 

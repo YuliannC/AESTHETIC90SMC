@@ -265,19 +265,7 @@ header{
         <button>Añadir al carrito</button>
     </div>
 </div>
-<div class="item">
-    <figure>
-        <img
-            src="public/images/producto_2.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>Chaqueta en jean</h2>
-        <p class="price">$85.000</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div>
+
 <div class="item">
     <figure>
         <img
@@ -291,32 +279,7 @@ header{
         <button>Añadir al carrito</button>
     </div>
 </div>
-<div class="item">
-    <figure>
-        <img
-            src="public/images/producto_5.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>Smartwatch</h2>
-        <p class="price">$90</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div>
-<div class="item">
-    <figure>
-        <img
-            src="public/images/a2.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>Conjunto Hailey</h2>
-        <p class="price">$34.900</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div>
+
 <div class="item">
     <figure>
         <img
@@ -359,44 +322,6 @@ header{
 <div class="item">
     <figure>
         <img
-            src="public/images/a5.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>vestido strapples</h2>
-        <p class="price">$26.000</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div><div class="item">
-    <figure>
-        <img
-            src="public/images/a3.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>Vestido Kylie</h2>
-        <p class="price">$49.900</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div>
-<div class="item">
-    <figure>
-        <img
-            src="public/images/a4.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>Vestido marmol</h2>
-        <p class="price">$26.000</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div>
-<div class="item">
-    <figure>
-        <img
             src="public/images/b2.jpeg"
             alt="producto"
         />
@@ -404,19 +329,6 @@ header{
     <div class="info-product">
         <h2>Conjunto Kourtney</h2>
         <p class="price">$65.000</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div>
-<div class="item">
-    <figure>
-        <img
-            src="public/images/b1.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>Vestido Maddy</h2>
-        <p class="price">$38.000</p>
         <button>Añadir al carrito</button>
     </div>
 </div>

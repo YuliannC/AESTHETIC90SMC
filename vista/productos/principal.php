@@ -143,6 +143,10 @@ textarea{
 			</ul>
 		</nav>
 	</div>
+
+	<!-- FIN DE MENU -->
+
+	<!-- INICIO DE PRODUCTOS -->
   
   <img src="public/images/xxx.jpg" alt="">
   <div class="row">
@@ -157,7 +161,7 @@ textarea{
         </div>
     </div>
 
-  <!-- MODAL FRM REGISTRAR -->
+  <!-- MODAL FRM REGISTRAR PRODUCTOS-->
 
 <div id="openModal" class="modalDialog">
 	<div>
@@ -192,7 +196,7 @@ textarea{
       </div>
       </div>
 	</div>
-	
+	  <!-- FINAL MODAL FRM REGISTRAR PRODUCTOS-->
 
 </div>  
 

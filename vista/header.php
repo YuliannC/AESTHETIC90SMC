@@ -16,7 +16,6 @@
 <link rel="stylesheet" type="text/css" href="public/styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="public/styles/responsive.css">
 <link rel="stylesheet" type="text/css" href="public/styles/principal.css">
-<link rel="stylesheet" type="" href="public/js/scripts.js">
 
 </head>
 <body>
@@ -31,7 +30,7 @@
 			<nav class="main_nav">
 				<ul id="navigation">
 					<li><a href="?controlador=inicio&accion=principal">Inicio</a></li>
-					<li><a href="?controlador=productos&accion=prendas">Prendas</a></li>
+					<li><a href="?controlador=productos&accion=vercarrito">Prendas</a></li>
 					<li><a href="?controlador=administrador&accion=contactanos">Pqr</a></li>
 					<li><a href="contact.html"></a></li>
 				</ul>
@@ -47,7 +46,7 @@
 							<img src="public/images/shopping-bag.svg" alt="">
 							<div class="cart_num_container">
 								<div class="cart_num_inner">
-									<div class="cart_num">1</div>
+									<div class="cart_num" id="contador-productos">1</div>
 								</div>
 							</div>
 						</div>

@@ -15,6 +15,21 @@ class productos_controlador{
     public function frmRegistrar(){
         $this->vista->unirContenido("productos/frmRegistro");
     }
+    public function vercarrito(){
+        $this->vista->unirContenido("productos/carrito");
+    }
+    public function vervestido(){
+        $this->vista->unirContenido("productos/vestidos");
+    }
+    public function verfalda(){
+        $this->vista->unirContenido("productos/pant");
+    }
+    public function verconjunto(){
+        $this->vista->unirContenido("productos/pant");
+    }
+    public function verpant(){
+        $this->vista->unirContenido("productos/pant");
+    }
     public function registrar(){
         extract($_POST);
         $datos["prov_pro"]  = $prov_id;

@@ -12,7 +12,7 @@
 		<nav class="menu_nav">
 			<ul class="menu_mm">
 				<li class="menu_mm"><a href="#">Inicio</a></li>
-				<li class="menu_mm"><a href="?controlador=cliente&accion=principal">Prendas</a></li>
+				<li class="menu_mm"><a href="?controlador=productos&accion=vercarrito">Prendas</a></li>
 				<li class="menu_mm"><a href="https://api.whatsapp.com/send?phone=573026876413&text=Hola!!%20Quiero%20hacer%20un%20pedido%20o%20tengo%20una%20consulta%20%E2%9C%A8">Atencion personalizada</a></li>
 				<li class="menu_mm"><a href="#">Lo mas vendido</a></li>
 				<li class="menu_mm"><a href="?controlador=administrador&accion=contactanos">PQR</a></li>
@@ -22,6 +22,7 @@
 
 	<!-- Home -->
 
+	<br><br><br><br>
 	<div class="home">
 
 		<!-- Home Slider -->
@@ -129,7 +130,7 @@
 								<div class="promo_subtitle">en todas las compras</div>
 							</div>
 						</div>
-						<div class="promo_link"><a href="#">Compra Ahora</a></div>
+						<div class="promo_link"><a href="#openModal">Compra Ahora</a></div>
 					</div>
 				</div>
 
@@ -143,7 +144,7 @@
 								<div class="promo_subtitle">en todas las compras</div>
 							</div>
 						</div>
-						<div class="promo_link"><a href="#">Compra Ahora</a></div>
+						<div class="promo_link"><a href="#openModal2">Compra Ahora</a></div>
 					</div>
 				</div>
 
@@ -157,7 +158,7 @@
 								<div class="promo_subtitle">en todas las compras</div>
 							</div>
 						</div>
-						<div class="promo_link"><a href="#">Compra Ahora</a></div>
+						<div class="promo_link"><a href="#openModal3">Compra Ahora</a></div>
 					</div>
 				</div>
 
@@ -249,11 +250,11 @@
 		
             <div class="btn-group" role="group">
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<div class="button extra_2_button"><a href="checkout.html">vestidos</a></div>&nbsp;&nbsp;&nbsp;
-				<div class="button extra_2_button"><a href="checkout.html">tops</a></div>&nbsp;&nbsp;&nbsp;
-				<div class="button extra_2_button"><a href="checkout.html">pants</a></div>&nbsp;&nbsp;&nbsp;
-				<div class="button extra_2_button"><a href="checkout.html">faldas</a></div>&nbsp;&nbsp;&nbsp;
-				<div class="button extra_2_button"><a href="checkout.html">conjuntos</a></div>&nbsp;&nbsp;&nbsp;
+				<div class="button extra_2_button"><a href="?controlador=productos&accion=vervestido">vestidos</a></div>&nbsp;&nbsp;&nbsp;
+				<div class="button extra_2_button"><a href="?controlador=productos&accion=vertops">tops</a></div>&nbsp;&nbsp;&nbsp;
+				<div class="button extra_2_button"><a href="?controlador=productos&accion=verpant">pants</a></div>&nbsp;&nbsp;&nbsp;
+				<div class="button extra_2_button"><a href="?controlador=productos&accion=verfalda">faldas</a></div>&nbsp;&nbsp;&nbsp;
+				<div class="button extra_2_button"><a href="?controlador=productos&accion=verconjunto">conjuntos</a></div>&nbsp;&nbsp;&nbsp;
 				
             </div>
         </div>
@@ -381,89 +382,251 @@
 			<div class="row products_container">
 
 		
-				<div class="col-lg-4 product_col">
-					<div class="product">
-						<div class="product_image">
-							<img src="public/images/producto_1.jpeg" alt="">
-						</div>
-						<div class="rating rating_4">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</div>
-						<div class="product_content clearfix">
-							<div class="product_info">
-								<div class="product_name"><a href="product.html">Conjunto Mary</a></div>
-								<div class="product_price">$65.0000</div>
-							</div>
-							<div class="product_options">
-								<div class="product_buy product_option"><img src="public/images/shopping-bag-white.svg" alt=""></div>
-								<div class="product_fav product_option">+</div>
-							</div>
-						</div>
-					</div>
-				</div>
+<style>
+/* Globales */
+*::after,
+*::before,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-			
-				<div class="col-lg-4 product_col">
-					<div class="product">
-						<div class="product_image">
-							<img src="public/images/producto_5.jpeg" alt="">
-						</div>
-						<div class="rating rating_4">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</div>
-						<div class="product_content clearfix">
-							<div class="product_info">
-								<div class="product_name"><a href="product.html">Scarlett</a></div>
-								<div class="product_price">$105.000</div>
-							</div>
-							<div class="product_options">
-								<div class="product_buy product_option"><img src="public/images/shopping-bag-white.svg" alt=""></div>
-								<div class="product_fav product_option">+</div>
-							</div>
-						</div>
-					</div>
-				</div>
+body{
+    margin: 0 auto;
+    max-width: 1200px;
+    font-family: 'Lato';
+    color: #333;
+}
 
-				
-				<div class="col-lg-4 product_col">
-					<div class="product">
-						<div class="product_image">
-							<img src="public/images/producto_3.jpeg" alt="">
-						</div>
-						<div class="rating rating_4">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</div>
-						<div class="product_content clearfix">
-							<div class="product_info">
-								<div class="product_name"><a href="product.html">Conjunto Mary</a></div>
-								<div class="product_price">$95.000</div>
-							</div>
-							<div class="product_options">
-								<div class="product_buy product_option"><img src="public/images/shopping-bag-white.svg" alt=""></div>
-								<div class="product_fav product_option">+</div>
-							</div>
-						</div>
-					</div>
-				</div>
+.icon-cart{
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+}
 
-			</div>
+.icon-cart:hover{
+    cursor: pointer;
+}
 
-				
+img{
+    max-width: 100%;
+}
 
-		</div>
-	</div>
+/* Header */
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 40px 0;
+}
+
+.container-icon{
+    position: relative;
+}
+
+.count-products{
+    position: absolute;
+    top: 55%;
+    right: 0;
+
+    background-color: #000;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#contador-productos{
+    font-size: 12px;
+}
+
+.container-cart-products{
+    position: absolute;
+    top: 50px;
+    right: 0;
+
+    background-color: #fff;
+    width: 400px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+    
+}
+
+.cart-product{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+
+}
+
+.info-cart-product{
+    display: flex;
+    justify-content: space-between;
+    flex: 0.8;
+}
+
+.titulo-producto-carrito{
+    font-size: 20px;
+}
+
+.precio-producto-carrito{
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.cantidad-producto-carrito{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.icon-close{
+    width: 25px;
+    height: 25px;
+}
+
+.icon-close:hover{
+    stroke: red;
+    cursor: pointer;
+}
+
+.cart-total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.cart-total h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.total-pagar{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.hidden-cart{
+    display: none;
+}
+
+
+
+
+/* Main */
+.container-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.item{
+    border-radius: 10px;
+}
+
+.item:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.item img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
+}
+
+.item figure{
+    overflow: hidden;
+}
+
+.item:hover img{
+    transform: scale(1.2);
+}
+
+.info-product{
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price{
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.info-product button{
+    border: none;
+    background: none;
+    background-color: #000;
+    color: #fff;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+.cart-empty{
+    padding: 20px;
+    text-align: center;
+}
+
+
+.hidden{
+    display: none;
+}
+</style>
+<div class="item">
+    <figure>
+        <img
+            src="public/images/producto_2.jpeg"
+            alt="producto"
+        />
+    </figure>
+    <div class="info-product">
+        <h2>Chaqueta en jean</h2>
+        <p class="price">$85.000</p>
+        <button>Añadir al carrito</button>
+    </div>
+</div>
+
+<div class="item">
+    <figure>
+        <img
+            src="public/images/producto_3.jpeg"
+            alt="producto"
+        />
+    </figure>
+    <div class="info-product">
+        <h2>Corst + pantalon</h2>
+        <p class="price">$120.000</p>
+        <button>Añadir al carrito</button>
+    </div>
+</div>
+
+<div class="item">
+    <figure>
+        <img
+            src="public/images/producto_5.jpeg"
+            alt="producto"
+        />
+    </figure>
+    <div class="info-product">
+        <h2>Smartwatch</h2>
+        <p class="price">$90</p>
+        <button>Añadir al carrito</button>
+    </div>
+</div>
 
 	 
 
@@ -474,7 +637,7 @@
 				<div class="extra_1_price">20%<span>off</span></div>
 				<div class="extra_1_title">En toda la tienda</div>
 				<div class="extra_1_text">Este descuento solo es valido por compras en la sitio web.</div>
-				<div class="button extra_1_button"><a href="checkout.html">Comprar</a></div>
+				<div class="button extra_1_button"><a href="?controlador=productos&accion=vercarrito">Comprar</a></div>
 			</div>
 		</div>
 		<div class="extra_promo extra_promo_2">
@@ -486,7 +649,7 @@
 					<div class="extra_2_bottom">calidad</div>
 				</div>
 				<div class="extra_2_text">Somos diseño, estilo y color.</div>
-				<div class="button extra_2_button"><a href="checkout.html">COMPRAR</a></div>
+				<div class="button extra_2_button"><a href="?controlador=productos&accion=vercarrito">COMPRAR</a></div>
 			</div>
 		</div>
 	</div>
@@ -569,7 +732,7 @@
 	</div>
 
 	<!-- Testimonials -->
-	<br><br>
+	<br><br><br><br><br><br><br><br>
 	<!-- Newsletter -->
 
 	<div class="newsletter">
@@ -779,3 +942,129 @@
 			</div>
 		</div>	
 	</div> -->
+<style>
+  h1{
+    text-align: center;
+  }
+  .imgModal{
+    float: left;
+    width: 60%;
+	padding: 50px;
+	
+  }
+  .modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+	text-align: center;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalDialog > div {
+	width: 900px;
+	position: relative;
+	margin: 2% auto;
+	padding: 1px 1px 1px 1px;
+	border-radius: 10px;
+	background: transparent;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+  -webkit-transition: opacity 400ms ease-in;
+-moz-transition: opacity 400ms ease-in;
+transition: opacity 400ms ease-in;
+}
+.close {
+	background: white;
+	color: black;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+.close:hover { background: white; }
+*{box-sizing:border-box;}
+.btnCompra{
+	background-color: gray;
+	border-color : none ;
+	border:1px solid #000;
+	border-radius:5px;
+	
+}
+</style>
+
+ <!-- MODAL DETALLE 1 -->
+
+ <div id="openModal" class="modalDialog">
+	<div>
+	<a href="#close" title="Close" class="close" style="color:black;" >X</a>
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgModal" src="public/images/promocion_1.jpeg" alt="">
+	<br><br><br><br><br><br>
+	<h1>Conjunto Shelsee</h1>
+	<p>Falda + Top</p>
+	<h3></h3>
+	<h2>$75.000</h2>
+	<br>
+    <button class="button extra_2_button">Comprar</button>
+	<br><br><br><br><br><br><br><br>
+    </div>
+	</div>
+
+	<!-- MODAL DETALLE 2 -->
+
+	<div id="openModal2" class="modalDialog">
+	<div>
+	<a href="#close" title="Close" class="close" style="color:black;" >X</a>
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgModal" src="public/images/promocion_2.jpeg" alt="">
+	<br><br><br><br><br><br>
+	<h1>Conjunto Regreso a clases</h1>
+	<p>Jogger + Basica</p>
+	<h3></h3>
+	<h2>$75.000</h2>
+	<br>
+    <button class="button extra_2_button">Comprar</button>
+	<br><br><br><br><br>
+    </div>
+	</div>
+	<!-- MODAL DETALLE 2 -->
+
+	<div id="openModal3" class="modalDialog">
+	<div>
+	<a href="#close" title="Close" class="close" style="color:black;" >X</a>
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgModal" src="public/images/promocion_3.jpeg" alt="">
+	<br><br><br><br><br><br>
+	<h1>Conjunto Liz</h1>
+	<p>Pant colores + Crop top tiras</p>
+	<h3></h3>
+	<h2>$90.000</h2>
+	<br>
+    <button class="button extra_2_button">Comprar</button>
+	<br><br><br><br><br><br><br><br><br><br>
+    </div>
+	</div>
+	
