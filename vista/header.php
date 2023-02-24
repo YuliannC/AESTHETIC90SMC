@@ -32,7 +32,7 @@
 					<li><a href="?controlador=inicio&accion=principal">Inicio</a></li>
 					<li><a href="?controlador=productos&accion=vercarrito">Prendas</a></li>
 					<li><a href="?controlador=administrador&accion=contactanos">Pqr</a></li>
-					<li><a href="contact.html"></a></li>
+					<li><a href="?controlador=administrador&accion=frmRegistrar">R productos</a></li>
 				</ul>
 			</nav>
 			<div class="header_content ml-auto">
