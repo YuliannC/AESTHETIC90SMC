@@ -200,7 +200,8 @@ header{
 
 .hidden{
     display: none;
-}</style>
+}
+</style>
 
 
 <br><br><br><br><br><br>
@@ -209,14 +210,15 @@ header{
   $query = "select * from imagenes";
   $resultado = mysqli_query($conn,$query);
 ?>
-<div class="col-lg-8">
+<div class="col-lg-14">
            <div class="container-items">
                <?php foreach($resultado as $row){ ?>
          <div class="item">
+            <a href="?controlador=productos&accion=detalles&id=<?php echo $row['cod_imagen']; ?>">
       <img src="public/images/<?php echo $row['imagen']; ?>" class="card-img-top" alt="...">
+      </a>
        <div class="info-product">
-       <h3 class="card-title"><strong><?php echo $row['nombre']; ?></strong></h3>
-       <h5 class="card-title"><strong><?php echo $row['descripcion']; ?></strong></h5>
+       <h4 class="card-title"><strong><?php echo $row['nombre']; ?></strong></h4>
        <h1 class="price"><strong><?php echo $row['precio']; ?></strong></h1>
        <button>Añadir al carrito</button>
 

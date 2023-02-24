@@ -30,6 +30,12 @@ class productos_controlador{
     public function verpant(){
         $this->vista->unirContenido("productos/pant");
     }
+    public function detalles(){
+        $this->vista->unirContenido("productos/detalle");
+    }
+    public function verbolsa(){
+        $this->vista->unirContenido("productos/bolsa");
+    }
     public function registrar(){
         extract($_POST);
         $datos["prov_pro"]  = $prov_id;

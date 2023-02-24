@@ -41,7 +41,7 @@
 				</div>
 				<div class="shopping">
 					<!-- Cart -->
-					<a href="#">
+					<a href="?controlador=productos&accion=verbolsa">
 						<div class="cart">
 							<img src="public/images/shopping-bag.svg" alt="">
 							<div class="cart_num_container">

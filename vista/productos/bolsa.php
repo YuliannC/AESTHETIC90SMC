@@ -1,4 +1,30 @@
-<style>/* Globales */
+<br><br><br><br><br><br>
+<?php 
+  include('recursos/conexion2.php');
+  $query = "select * from imagenes";
+  $resultado = mysqli_query($conn,$query);
+?>
+<div class="col-lg-14">
+           <div class="container-items">
+               <?php foreach($resultado as $row){ ?>
+         <div class="item">
+            <a href="?controlador=productos&accion=detalles&id=<?php echo $row['cod_imagen']; ?>">
+      <img src="public/images/<?php echo $row['imagen']; ?>" class="card-img-top" alt="...">
+      </a>
+       <div class="info-product">
+       <h4 class="card-title"><strong><?php echo $row['nombre']; ?></strong></h4>
+       <h1 class="price"><strong><?php echo $row['precio']; ?></strong></h1>
+       <button>Añadir al carrito</button>
+
+
+    </div>
+               
+  </div>
+  <?php }?>
+       </div>
+    </div>
+  </div>
+  <style>/* Globales */
 *::after,
 *::before,
 *{
@@ -7,7 +33,12 @@
     box-sizing: border-box;
 }
 
-
+body{
+    margin: 0 auto;
+    max-width: 1200px;
+    font-family: 'Lato';
+    color: #333;
+}
 
 .icon-cart{
     width: 40px;
@@ -131,6 +162,8 @@ header{
 }
 
 
+
+
 /* Main */
 .container-items{
     display: grid;
@@ -168,6 +201,7 @@ header{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    text-align:center;
 }
 
 .price{
@@ -192,68 +226,5 @@ header{
 
 .hidden{
     display: none;
-}</style>
-
-<!-- CARRO DE COMPRAS -->
-<br><br><br><br><br><br>
-<div class="container-icon">
-    
-</div>
-</header>
-<div class="container-items">
-<div class="item">
-    <figure>
-        <img
-            src="public/images/a5.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>vestido strapples</h2>
-        <p class="price">$26.000</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div><div class="item">
-    <figure>
-        <img
-            src="public/images/a3.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>Vestido Kylie</h2>
-        <p class="price">$49.900</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div>
-<div class="item">
-    <figure>
-        <img
-            src="public/images/a4.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>Vestido marmol</h2>
-        <p class="price">$26.000</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div>
-
-<div class="item">
-    <figure>
-        <img
-            src="public/images/b1.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>Vestido Maddy</h2>
-        <p class="price">$38.000</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div>
-
-</div>
-</div>
-
+}
+</style>

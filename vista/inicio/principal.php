@@ -94,9 +94,9 @@
 						<div class="col">
 							<div class="home_slider_dots">
 								<ul id="home_slider_custom_dots" class="home_slider_custom_dots">
-									<li class="home_slider_custom_dot active">01.<div></div></li>
-									<li class="home_slider_custom_dot">02.<div></div></li>
-									<li class="home_slider_custom_dot">03.<div></div></li>
+									<li class="home_slider_custom_dot active"><div></div></li>
+									<li class="home_slider_custom_dot"><div></div></li>
+									<li class="home_slider_custom_dot"><div></div></li>
 								</ul>
 							</div>
 						</div>
@@ -104,9 +104,7 @@
 				</div>		
 			</div>
 		</div>
-	</div>
-
-	<!-- Promo -->
+	
 
 	<div class="promo">
 		<div class="container">
@@ -381,252 +379,7 @@
 			</div>
 			<div class="row products_container">
 
-		
-<style>
-/* Globales */
-*::after,
-*::before,
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body{
-    margin: 0 auto;
-    max-width: 1200px;
-    font-family: 'Lato';
-    color: #333;
-}
-
-.icon-cart{
-    width: 40px;
-    height: 40px;
-    stroke: #000;
-}
-
-.icon-cart:hover{
-    cursor: pointer;
-}
-
-img{
-    max-width: 100%;
-}
-
-/* Header */
-header{
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 0 40px 0;
-}
-
-.container-icon{
-    position: relative;
-}
-
-.count-products{
-    position: absolute;
-    top: 55%;
-    right: 0;
-
-    background-color: #000;
-    color: #fff;
-    width: 25px;
-    height: 25px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-}
-
-#contador-productos{
-    font-size: 12px;
-}
-
-.container-cart-products{
-    position: absolute;
-    top: 50px;
-    right: 0;
-
-    background-color: #fff;
-    width: 400px;
-    z-index: 1;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
-    border-radius: 10px;
-    
-}
-
-.cart-product{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px;
-
-    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
-
-}
-
-.info-cart-product{
-    display: flex;
-    justify-content: space-between;
-    flex: 0.8;
-}
-
-.titulo-producto-carrito{
-    font-size: 20px;
-}
-
-.precio-producto-carrito{
-    font-weight: 700;
-    font-size: 20px;
-    margin-left: 10px;
-}
-
-.cantidad-producto-carrito{
-    font-weight: 400;
-    font-size: 20px;
-}
-
-.icon-close{
-    width: 25px;
-    height: 25px;
-}
-
-.icon-close:hover{
-    stroke: red;
-    cursor: pointer;
-}
-
-.cart-total{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
-    gap: 20px;
-}
-
-.cart-total h3{
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.total-pagar{
-    font-size: 20px;
-    font-weight: 900;
-}
-
-.hidden-cart{
-    display: none;
-}
-
-
-
-
-/* Main */
-.container-items{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.item{
-    border-radius: 10px;
-}
-
-.item:hover{
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
-}
-
-.item img{
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
-    transition: all .5s;
-}
-
-.item figure{
-    overflow: hidden;
-}
-
-.item:hover img{
-    transform: scale(1.2);
-}
-
-.info-product{
-    padding: 15px 30px;
-    line-height: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.price{
-    font-size: 18px;
-    font-weight: 900;
-}
-
-.info-product button{
-    border: none;
-    background: none;
-    background-color: #000;
-    color: #fff;
-    padding: 15px 10px;
-    cursor: pointer;
-}
-
-.cart-empty{
-    padding: 20px;
-    text-align: center;
-}
-
-
-.hidden{
-    display: none;
-}
-</style>
-<div class="item">
-    <figure>
-        <img
-            src="public/images/producto_2.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>Chaqueta en jean</h2>
-        <p class="price">$85.000</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div>
-
-<div class="item">
-    <figure>
-        <img
-            src="public/images/producto_3.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>Corst + pantalon</h2>
-        <p class="price">$120.000</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div>
-
-<div class="item">
-    <figure>
-        <img
-            src="public/images/producto_5.jpeg"
-            alt="producto"
-        />
-    </figure>
-    <div class="info-product">
-        <h2>Smartwatch</h2>
-        <p class="price">$90</p>
-        <button>Añadir al carrito</button>
-    </div>
-</div>
 
 	 
 
@@ -729,12 +482,12 @@ header{
 
 			</div>
 		</div>	
-	</div>
+	</div> </div>
 
 	<!-- Testimonials -->
-	<br><br><br><br><br><br><br><br>
+	
 	<!-- Newsletter -->
-
+<!-- 
 	<div class="newsletter">
 		<div class="newsletter_content">
 			<div class="newsletter_image" style="background-image:url(public/images/newsletter.jpg)"></div>
@@ -761,7 +514,7 @@ header{
 			</div>
 		</div>
 	</div>
-<br>
+<br> -->
 	<!-- Gallery Slider -->
 			<!-- <div class="owl-carousel owl-theme gallery_slider">
 			
@@ -942,82 +695,12 @@ header{
 			</div>
 		</div>	
 	</div> -->
-<style>
-  h1{
-    text-align: center;
-  }
-  .imgModal{
-    float: left;
-    width: 60%;
-	padding: 50px;
-	
-  }
-  .modalDialog {
-	position: fixed;
-	font-family: Arial, Helvetica, sans-serif;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: rgba(0,0,0,0.8);
-	z-index: 99999;
-	opacity:0;
-	-webkit-transition: opacity 400ms ease-in;
-	-moz-transition: opacity 400ms ease-in;
-	transition: opacity 400ms ease-in;
-	pointer-events: none;
-	text-align: center;
-}
-.modalDialog:target {
-	opacity:1;
-	pointer-events: auto;
-}
-.modalDialog > div {
-	width: 900px;
-	position: relative;
-	margin: 2% auto;
-	padding: 1px 1px 1px 1px;
-	border-radius: 10px;
-	background: transparent;
-	background: -moz-linear-gradient(#fff, #999);
-	background: -webkit-linear-gradient(#fff, #999);
-	background: -o-linear-gradient(#fff, #999);
-  -webkit-transition: opacity 400ms ease-in;
--moz-transition: opacity 400ms ease-in;
-transition: opacity 400ms ease-in;
-}
-.close {
-	background: white;
-	color: black;
-	line-height: 25px;
-	position: absolute;
-	right: -12px;
-	text-align: center;
-	top: -10px;
-	width: 24px;
-	text-decoration: none;
-	font-weight: bold;
-	-webkit-border-radius: 12px;
-	-moz-border-radius: 12px;
-	border-radius: 12px;
-	-moz-box-shadow: 1px 1px 3px #000;
-	-webkit-box-shadow: 1px 1px 3px #000;
-	box-shadow: 1px 1px 3px #000;
-}
-.close:hover { background: white; }
-*{box-sizing:border-box;}
-.btnCompra{
-	background-color: gray;
-	border-color : none ;
-	border:1px solid #000;
-	border-radius:5px;
-	
-}
-</style>
+
+
 
  <!-- MODAL DETALLE 1 -->
 
- <div id="openModal" class="modalDialog">
+ <!-- <div id="openModal" class="modalDialog">
 	<div>
 	<a href="#close" title="Close" class="close" style="color:black;" >X</a>
 	
@@ -1031,11 +714,11 @@ transition: opacity 400ms ease-in;
     <button class="button extra_2_button">Comprar</button>
 	<br><br><br><br><br><br><br><br>
     </div>
-	</div>
+	</div> -->
 
 	<!-- MODAL DETALLE 2 -->
 
-	<div id="openModal2" class="modalDialog">
+	<!-- <div id="openModal2" class="modalDialog">
 	<div>
 	<a href="#close" title="Close" class="close" style="color:black;" >X</a>
 	
@@ -1049,10 +732,10 @@ transition: opacity 400ms ease-in;
     <button class="button extra_2_button">Comprar</button>
 	<br><br><br><br><br>
     </div>
-	</div>
+	</div> -->
 	<!-- MODAL DETALLE 2 -->
 
-	<div id="openModal3" class="modalDialog">
+	<!-- <div id="openModal3" class="modalDialog">
 	<div>
 	<a href="#close" title="Close" class="close" style="color:black;" >X</a>
 	
@@ -1066,5 +749,5 @@ transition: opacity 400ms ease-in;
     <button class="button extra_2_button">Comprar</button>
 	<br><br><br><br><br><br><br><br><br><br>
     </div>
-	</div>
+	</div> -->
 	
