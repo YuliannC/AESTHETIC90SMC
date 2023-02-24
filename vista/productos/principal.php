@@ -154,7 +154,7 @@ textarea{
             <div class="btn-group" role="group">
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<div class="button extra_2_button" style="text-align: center;" ><a href="?controlador=productos&accion=frmRegistrar">Registrar</a></div>&nbsp;&nbsp;&nbsp;
-			<div class="button extra_2_button"><a href="?controlador=productos&accion=vercarrito">Listar</a></div>&nbsp;&nbsp;&nbsp;	
+			<div class="button extra_2_button"><a href="?controlador=productos&accion=vercarrito">Listar</a></div>&nbsp;&nbsp;&nbsp;	 
 			<div class="extra_2_button"> <input type="text" placeholder="Buscar por nombre" class="buscar"> </div>&nbsp;&nbsp;&nbsp;
 			<div class="extra_2_button"> <input type="submit" class="search_button" value=""><img src="public/images/magnifying-glass.svg" alt="">			
             </div>
