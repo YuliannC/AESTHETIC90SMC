@@ -26,7 +26,7 @@
 
 	<header class="header">
 		<div class="header_inner d-flex flex-row align-items-center justify-content-start">
-			<div class="logo"><a href="#">Aesthetic90s</a></div>
+			<div class="logo"><a href="?controlador=inicio&accion=principal">Aesthetic90s</a></div>
 			<nav class="main_nav">
 				<ul id="navigation">
 					<li><a href="?controlador=inicio&accion=principal">Inicio</a></li>
