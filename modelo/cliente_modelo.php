@@ -65,7 +65,7 @@ class cliente_modelo{
         return $s->execute($v);
     
       }
-      public static function mdlconsultarByApellido($apellidos){
+      public static function mdlconsultarByApe($apellidos){
         $o = new conexion();
         $c = $o->getConexion();
         $sql = "SELECT * FROM t_usuario WHERE USU_APELLIDOS LIKE '$apellidos%' AND USU_ESTADO = 1";

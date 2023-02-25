@@ -61,11 +61,10 @@ class productos_modelo{
         return $s->fetch();
     }
 
-    public static function mdlconsultarXcodigo($codigo){
+    public static function mdlconsultarXnombre($titulo){
         $obj = new conexion();
         $con = $obj -> getConexion();
-        $sql = "SELECT * FROM T_TP_REVISION 
-        INNER JOIN T_REVISION ON REV_ID = TPREV_REV_ID  WHERE REV_CODIGO LIKE '$codigo%' AND TPREV_ESTADO = 1";
+        $sql = "SELECT * FROM imagenes WHERE titulo LIKE '$titulo%' AND estado = 1";
         $s = $con->prepare($sql);
         $v = array($codigo);
         $s->execute();   

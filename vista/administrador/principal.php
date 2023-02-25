@@ -1,4 +1,4 @@
-<!-- Menu
+
 
 <div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
 		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
@@ -19,29 +19,66 @@
 			</ul>
 		</nav>
 	</div>
-  <div class="home_slider_container">
-			<div class="owl-carousel owl-theme home_slider">
-				<div class="owl-item">
-					<div style="position: relative; width: 100%; height: 0; padding-top: 50.0000%;
- 							padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- 							border-radius: 8px; will-change: transform;">
-  						<iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-   							 src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFaIuSZ4eI&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-						</iframe>
+
+
+	
+	
+
+
+
+
+<div class="promo">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container text-center"><br>
+						<div class="section_title">ADMINISTRACION</div>
+						<p> <strong>AESTHETIC 90S MC</strong></p>
 					</div>
-					<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFaIuSZ4eI&#x2F;view?utm_content=DAFaIuSZ4eI&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a>
-				</div> -->
+				</div>
+			</div>
+			<div class="row promo_container">
 
-		
-<style>
-  img{
-    text-align: center;
-    width: 100%;
-  }
-</style>
+				<!-- Promo Item -->
+				<div class="col-lg-3 promo_col">
+					<div class="promo_item">
+						<a href="?controlador=cliente&accion=principal">
+							<img src="public/images/iconclientes.jpeg" alt="">
+						</a>
+					</div>
+				</div>
 
-<!-- Menu -->
-<br><br><br><br><br><br>
+				<!-- Promo Item -->
+				<div class="col-lg-3 promo_col">
+					<div class="promo_item">
+						<a href="?controlador=proveedores&accion=principal">
+							<img src="public/images/iconproveedores.jpeg" alt="">
+						</a>
+					</div>
+				</div>
+				<!-- Promo Item -->
+				<div class="col-lg-3 promo_col">
+					<div class="promo_item">
+						<a href="?controlador=productos&accion=principal">
+							<img src="public/images/iconproductos.jpeg" alt="">
+						</a>
+					</div>
+				</div>
+				<!-- Promo Item -->
+				<div class="col-lg-3 promo_col">
+					<div class="promo_item">
+						<a href="?controlador=administrador&accion=listarPQR">
+							<img src="public/images/iconpqr.jpeg" alt="">
+						</a>
+					</div>
+				</div>
+				
+
+			</div>
+		</div>
+	</div>
+				
+<!-- 
 <div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
 		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
 		<div class="logo menu_mm"><a href="#">Aesthetic 90s Mc</a></div>
@@ -69,4 +106,4 @@
 				<div class="button extra_2_button"><a href="?controlador=administrador&accion=listarPQR">PQR</a></div>&nbsp;&nbsp;&nbsp;				
             </div>
         </div>
-    </div>
+    </div> -->

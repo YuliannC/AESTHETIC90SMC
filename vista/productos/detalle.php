@@ -20,7 +20,7 @@
   
   <div>
     <div style="text-align:center;">
-      <input value="-" ></input><input value="0" ></input><input value="+" ></input>
+      <input value="-" class="inputdetalle"></input><input value="0" class="inputdetalle"></input><input value="+" class="inputdetalle"></input>
       <br><br><br>
     <div style="text-align:center;">
     <button class="btnCompra">Comprar</button>
@@ -31,60 +31,3 @@
     <?php }?>
     </div>
 	</div>
-
-
-
-<style>
-  input{
-    border: none;
-    background: none;
-    background-color: gray;
-    padding: 15px 0px;
-    width:10%;
-    text-align:center;
-    font-weight:bold;
-  }
-       h1{
-        text-align: center;
-      }
-      h2{
-        text-align: center;
-      }
-      h3{
-        text-align: center;
-      }
-      p{
-        text-align: center;
-      }
-      .imgModal{
-        float: left;
-        width: 60%;
-      padding: 50px;
-      
-      }
-
-    .modalDialog:target {
-      opacity:1;
-      pointer-events: auto;
-    }
-    .modalDialog > div {
-      width: 900px;
-      position: relative;
-      margin: 2% auto;
-      padding: 1px 1px 1px 1px;
-      border-radius: 10px;
-      -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    }
-
-    .btnCompra{
-        border: none;
-        background: none;
-        background-color: #000;
-        color: #fff;
-        padding: 15px 130px;
-        cursor: pointer;
-        
-    }
-</style>

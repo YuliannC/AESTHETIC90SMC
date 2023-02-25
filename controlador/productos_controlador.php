@@ -1,6 +1,5 @@
 <?php
 require_once "modelo/productos_modelo.php";
-require_once "modelo/proveedores_modelo.php";
 class productos_controlador{
     
     public function __construct(){
@@ -35,6 +34,9 @@ class productos_controlador{
     }
     public function verbolsa(){
         $this->vista->unirContenido("productos/bolsa");
+    }
+    public function listarProduct(){
+        $this->vista->unirContenido("productos/listadoProductos");
     }
     public function registrar(){
         extract($_POST);
@@ -100,39 +102,6 @@ class productos_controlador{
         $this->vista->unirContenido("tipo_revision/frmDetalles");
     }
 
-    public function consultarXcodigo(){
-        extract($_POST);
-        $datos = tipo_revision_modelo::mdlconsultarXcodigo($codigo);
-        $tbl = "<table class='table'>";
-        $tbl .= "<tr>";
-        $tbl .= "<td>Codigo de revision</td>";
-        $tbl .= "<td>Fecha</td>";
-        // $tbl .= "<td>Tipo de revision</td>";
-        // $tbl .= "<td>Observacion</td>";
-        // $tbl .= "<td>Estado</td>";
-        $tbl .= "</tr>";
-        foreach ($datos as $v){
-            $id = $v["TPREV_ID"];
-            $e = "<a  href='?controlador=tipo_revision&accion=eliminar&tprev_id=$id'class='eliminar btn btn-danger'>
-            Eliminar</a>";
-            $f ="<a  href='?controlador=tipo_revision&accion=frmEditar&tprev_id=$id'class='btn btn-info'>
-            Editar</a>";
-            $d ="<a  href='?controlador=tipo_revision&accion=frmDetalles&tprev_id=$id'class='btn btn-light'>
-            Detalles</a>";
-            $tbl .= "<tr>";
-            $tbl .= "<td>".$v["REV_CODIGO"]."</td>";
-            $tbl .= "<td>".$v["TPREV_FECHA"]."</td>";
-            // $tbl .= "<td>".$v["TPREV_TIPO"]."</td>";
-            // $tbl .= "<td>".$v["TPREV_OBS"]."</td>";
-            // $estado = $v ["TPREV_ESTADO"] == 1 ? "ACTIVO":"INACTIVO";
-            // $tbl .= "<td>$estado</td>";
-            $tbl .= "<td>$f</td>";
-            $tbl .= "<td>$e</td>";
-            $tbl .= "<td>$d</td>";
-            $tbl .= "</tr>";
-        }
-        $tbl .= "</table>";
-        echo json_encode(array("mensaje"=> $tbl));
-    }
+    
 }
 ?>

@@ -16,6 +16,7 @@
 <link rel="stylesheet" type="text/css" href="public/styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="public/styles/responsive.css">
 <link rel="stylesheet" type="text/css" href="public/styles/principal.css">
+<link rel="stylesheet" href="public/styles/vista.css">
 
 </head>
 <body>
@@ -32,7 +33,7 @@
 					<li><a href="?controlador=inicio&accion=principal">Inicio</a></li>
 					<li><a href="?controlador=productos&accion=vercarrito">Prendas</a></li>
 					<li><a href="?controlador=administrador&accion=contactanos">Pqr</a></li>
-					<li><a href="?controlador=administrador&accion=frmRegistrar">R productos</a></li>
+					<li><a href="?controlador=administrador&accion=principal">Administracion</a></li>
 				</ul>
 			</nav>
 			<div class="header_content ml-auto">
@@ -85,3 +86,4 @@
 			<div class="burger_container d-flex flex-column align-items-center justify-content-around menu_mm"><div></div><div></div><div></div></div>
 		</div>
 	</header>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

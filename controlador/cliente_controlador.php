@@ -73,31 +73,33 @@ class cliente_controlador{
         header("location: /App");
     }
 
-   public static function buscarByApellido(){
+   public static function consultarByApellido(){
     extract($_POST);
     $datos = cliente_modelo::mdlconsultarByApe($apellidos);
     $tbl = "<table class='table'>";
     $tbl .= "<tr>";
-    $tbl .= "<td>NOMBRES</td>";
-    $tbl .= "<td>APELLIDOS</td>";
-    $tbl .= "<td>TELEFONO</td>";
-    $tbl .= "<td>CORREO</td>";
-    $tbl .= "<td>ROL</td>";
-    $tbl .="<td>ESTADO</td>";
+    $tbl .= "<td class='aling-middle text-center '>NOMBRES</td>";
+    $tbl .= "<td class='aling-middle text-center '>APELLIDOS</td>";
+    $tbl .= "<td class='aling-middle text-center '>TELEFONO</td>";
+    $tbl .= "<td class='aling-middle text-center '>CORREO</td>";
+    $tbl .= "<td class='aling-middle text-center '>ROL</td>";
+    $tbl .="<td class='aling-middle text-center '>ESTADO</td>";
     $tbl .= "</tr>";
     foreach($datos as $v){
-        $id=$v["CLI_ID"];
-        $e="<a href='?controlador=cliente&accion=eliminar&cli_id=$id' class='eliminar'>ELIMINAR</a>";
-        $ed = "<a href='?controlador=cliente&accion=editar&id=$id'class='Editar'>Editar</a>";
+        $id=$v["USU_ID"];
+        $e="<td class='aling-middle text-center'><a  href='?controlador=cliente&accion=frmEditar&cli_id=$id'class='btn btn-info'>
+        Editar</a></td>";
+        $ed = "<td class='aling-middle text-center'><a href='?controlador=cliente&accion=eliminar&cli_id=$id'class='btn btn-danger'>
+        Eliminar</a></td>";
         $tbl.= "<tr>";
-        $tbl.= "<td>".$v["USU_NOMBRE"]."</td>";
-        $tbl.= "<td>".$v["USU_APELLIDO"]."</td>";
-        $tbl.= "<td>".$v["USU_TELEFONO"]."</td>";
-        $tbl.= "<td>".$v["USU_CORREO"]."</td>";
-        $tbl.= "<td>".$v["USU_ROL"]."</td>";
-        $estado=$v ["CLI_ESTADO"]==1? "ACTIVO": "INACTIVO";
-        $tbl.="<td>".$estado."</td>";
-        $tbl.="<td>$ed</td>";
+        $tbl.= "<td class='aling-middle text-center'>".$v["USU_NOMBRES"]."</td>";
+        $tbl.= "<td class='aling-middle text-center'>".$v["USU_APELLIDOS"]."</td>";
+        $tbl.= "<td class='aling-middle text-center'>".$v["USU_TELEFONO"]."</td>";
+        $tbl.= "<td class='aling-middle text-center'>".$v["USU_CORREO"]."</td>";
+        $tbl.= "<td class='aling-middle text-center'>".$v["USU_ROL"]."</td>";
+        $estado=$v ["USU_ESTADO"]==1? "ACTIVO": "INACTIVO";
+        $tbl.="<td class='aling-middle text-center'>".$estado."</td>";
+        $tbl.="<td >$ed</td>";
         $tbl.="<td>$e</td>";
         $tbl.= "</tr>";
     }
