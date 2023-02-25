@@ -76,25 +76,24 @@ class proveedores_controlador{
                         "icono"=> "error"));
         }
       }
-      public function consultarByApellido(){
+      public function consultarBynombre(){
         extract($_POST);
-        $datos = cliente_modelo::mdlconsultarByApellido($apellidos);
+        $datos = proveedores_modelo::mdlconsultarByApellido($nombre);
         $tbl   = "<table class='table'>";
         $tbl   .= "<tr>";
-        $tbl   .= "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>NOMBRES</td>";
-        $tbl   .= "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>APELLIDOS</td>";
-        $tbl   .= "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>DOCUMENTO</td>";
-        $tbl   .= "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>CODIGO</td>";
-        // $tbl   .= "<td>ESTADO</td>";
-        // $tbl   .= "<td>ROL</td>";
+        $tbl   .= "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>NOMBRE</td>";
+        $tbl   .= "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>TELEFONO</td>";
+        $tbl   .= "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>DIRECCION</td>";
+        $tbl   .= "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>SECCION</td>";
+        $tbl   .= "<td>ESTADO</td>";
         $tbl   .= "</tr>";
         foreach($datos as $v){
-        $id= $v["CLI_ID"];
-        $e = "<a href='?controlador=cliente&accion=eliminar&id=$id' class='btn btn-light'>Eliminar</a>";
-        $ed = "<a href='?controlador=cliente&accion=frmEditar&id=$id' class='btn btn-light'>Editar</a>";
-        $f ="<a  href='?controlador=cliente&accion=frmDetalles&cli_id=$id'class='btn btn-light'>
+        $id= $v["PROV_ID"];
+        $e = "<a href='?controlador=proveedores&accion=eliminar&id=$id' class='btn btn-light'>Eliminar</a>";
+        $ed = "<a href='?controlador=proveedores&accion=frmEditar&id=$id' class='btn btn-light'>Editar</a>";
+        $f ="<a  href='?controlador=proveedores&accion=frmDetalles&cli_id=$id'class='btn btn-light'>
         Detalles</a>";
-        $estado = $v["CLI_ESTADO"] == 1 ? "ACTIVO":"INACTIVO";
+        $estado = $v["PROV_ESTADO"] == 1 ? "ACTIVO":"INACTIVO";
         $tbl   .= "<tr>";
         $tbl   .= "<td>".$v["CLI_NOMBRES"]."</td>";
         $tbl   .= "<td>".$v["CLI_APELLIDOS"]."</td>";

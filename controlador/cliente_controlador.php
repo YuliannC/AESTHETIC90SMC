@@ -70,7 +70,7 @@ class cliente_controlador{
     }
     public function salir(){
         session_destroy();
-        header("location: /App");
+        header("location: /AESTHETIC90SMC");
     }
 
    public static function consultarByApellido(){

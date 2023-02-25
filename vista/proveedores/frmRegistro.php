@@ -33,7 +33,7 @@
                     <form action="?controlador=proveedores&accion=Registrar" autocomplete="off" id="frmRegistro" method="post">
                    
                     <div class="input-group input-group-outline mb-3">
-
+                    <label class="form-label">Nombre</label>
                     <input type="text" name="nombre" class="form-control">
                     </div>
 
