@@ -33,7 +33,7 @@ class productos_modelo{
     public static function mdlEliminar($id){
         $obj = new conexion();
         $con = $obj -> getConexion();
-        $sql = "UPDATE T_TP_REVISION SET TPREV_ESTADO = 2 WHERE TPREV_ID = ?";
+        $sql = "UPDATE t_proveedores SET PROV_ESTADO = 2 WHERE PROV_ID = ?";
         $s   = $con->prepare($sql);
         $v   = array($id);
         return $s->execute($v);
@@ -68,6 +68,15 @@ class productos_modelo{
         $s = $con->prepare($sql);
         $v = array($codigo);
         $s->execute();   
+        return $s->fetchAll();
+    }
+    public static function mdlconsultarXfecha($fecha){
+        $o = new conexion();
+        $c = $o->getConexion();
+        $sql = "SELECT * FROM imagenes WHERE nombre LIKE '$fecha%' AND estado = 1";
+        $s = $c->prepare($sql);
+        $v = array($fecha);
+        $s->execute();        
         return $s->fetchAll();
     }
 }

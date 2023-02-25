@@ -15,11 +15,33 @@
 		</nav>
 	</div>
 
+  <br><br><br><br>
+      <form action="?controlador=proveedores&accion=Registrar" autocomplete="off" id="frmReg" method="post" name="formDatosPersonales">
+			<h2 style="color:black; text-align:center;">Registrar Proveedores</h2>
+					<br>	
+			<label for="nombre">Nombre</label>
+			<input type="text" name="nombre" id="nombre" required placeholder="nombre" value="<?php echo $this->datos["PROV_NOMBRE"];?>"/>
+			<br><br>
+			<label for="apellidos">Telefono</label>
+			<input type="number" name="telefono" id="telefono" placeholder="telefono" required value="<?php echo $this->datos["PROV_TELELFONO"];?>"/>
+			<br><br>
+			<label for="email" >Direccion</label>
+			<input type="text" name="direccion" id="direccion" placeholder="direccion" required value="<?php echo $this->datos["PROV_DIRECCION"];?>"/>
+			<br><br>
+      <select class="form-control" name="seccion" id="seccion">  
+          <option  <?php echo $var =="pant"?"selected":"";?> value="pant">Pant</option>
+          <option  <?php echo $var =="top"?"selected":"";?> value="top">top</option>
+          <option  <?php echo $var =="vestido"?"selected":"";?> value="vestido">vestido</option>
+          <option  <?php echo $var =="conjunto"?"selected":"";?> value="conjunto">conjunto</option>
+          <option  <?php echo $var =="chaqueta"?"selected":"";?> value="chaqueta">chaqueta</option>
+          <option  <?php echo $var =="corset"?"selected":"";?> value="corset">corset</option>
+      </select>
+			<input type="submit" name="aceptar" value="enviar datos">
+
+			</form>
+
 	<!-- FIN DE MENU -->
-<?php
-$var = $this->dato["CLI_ROL"];
-?>
-<div class="container-fluid py-4">
+<!-- <div class="container-fluid py-4">
       <div class="row">
         <div class="col-12">
           <div class="card my-4">
@@ -36,7 +58,7 @@ $var = $this->dato["CLI_ROL"];
                    
                     <div class="input-group input-group-outline mb-3">
                     <label class="form-label">Nombres</label>
-                    <input type="text" name="nombres" class="form-control" value="<?php echo $this->datos["USU_NOMBRES"];?>">
+                    <input type="text" name="nombres" class="form-control" value="<?php echo $this->datos["PROV_NOMBRES"];?>">
                     </div>
 
                     <div class="input-group input-group-outline mb-3">
@@ -74,4 +96,4 @@ $var = $this->dato["CLI_ROL"];
           </div>
         </div>
       </div>
-      </div>
+      </div> -->

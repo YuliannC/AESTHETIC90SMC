@@ -76,7 +76,7 @@ class administrador_controlador{
         $id   = $_GET["id"];
         $r    = administrador_modelo::mdlEliminar($id);
         if($r > 0){
-            echo json_encode(array("mensaje" => "Cliente borrado", "icono"=> "success"));
+            echo json_encode(array("mensaje" => "PQR borrado", "icono"=> "success"));
           
         }else{
             echo json_encode(array("mensaje" => "Error al borrar un cliente",
@@ -92,12 +92,12 @@ class administrador_controlador{
         $tbl   .= "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>APELLIDOS</td>";
         $tbl   .= "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>DOCUMENTO</td>";
         $tbl   .= "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>CODIGO</td>";
-        // $tbl   .= "<td>ESTADO</td>";
+        $tbl   .= "<td>ESTADO</td>";
         // $tbl   .= "<td>ROL</td>";
         $tbl   .= "</tr>";
         foreach($datos as $v){
         $id= $v["CLI_ID"];
-        $e = "<a href='?controlador=cliente&accion=eliminar&id=$id' class='btn btn-light'>Eliminar</a>";
+        $e = "<a href='?controlador=cliente&accion=eliminar&id=$id' class='eliminar'>Solucionado</a>";
         $ed = "<a href='?controlador=cliente&accion=frmEditar&id=$id' class='btn btn-light'>Editar</a>";
         $f ="<a  href='?controlador=cliente&accion=frmDetalles&cli_id=$id'class='btn btn-light'>
         Detalles</a>";
@@ -107,12 +107,13 @@ class administrador_controlador{
         $tbl   .= "<td>".$v["CLI_APELLIDOS"]."</td>";
         $tbl   .= "<td>".$v["CLI_DOCUMENTO"]."</td>";
         $tbl   .= "<td>".$v["CLI_CODIGO"]."</td>";
-        // $tbl   .= "<td>$estado</td>";
+        $estado .=$v ["CON_ESTADO"]==1? "ACTIVO": "SOLUCIONADO";
         // $tbl   .= "<td>".$v["CLI_ROL"]."</td>";
         $tbl   .= "<td>$ed</td>";
         $tbl   .= "<td>$e</td>";
         $tbl   .= "<td>$f</td>";
         $tbl   .= "</tr>";
+        $tbl   .= "<td>$estado</td>";
     }
         $tbl   .= "</table>";
         if($apellidos == ''){

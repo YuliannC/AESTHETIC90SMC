@@ -27,12 +27,10 @@
 			</div>
 			<div class="promo_link"><a href="?controlador=proveedores&accion=frmRegistro">Registrar un nuevo proveedor</a></div>
 			<br>
-			<div class="search" style="width:100%;">
-			<form action="#">
-				<input type="search" class="search_input menu_mm" required="required" placeholder="Buscar proveedor">
-				<button type="submit" id="search_button_menu" class="search_button menu_mm"><img class="menu_mm" src="public/images/magnifying-glass.svg" alt=""></button>
-			</form>
-		</div> <hr>
+			<div class="input-group input-group-outline mb3"> 
+                  <input type="text"class="search_input menu_mm" name="matricula" id="mat"  placeholder="Buscar proveedor por nombre">
+                </div>
+                <div id="resultado"></div>
 				
 
 			</div>

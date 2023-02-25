@@ -1,16 +1,16 @@
 <?php
 class cliente_modelo{
   public static function mdlRegistrar($datos){
-          $o = new conexion();
-          $c = $o->getConexion();
-          $sql = "INSERT INTO t_usuario
-                  (USU_NOMBRES, USU_APELLIDOS, USU_TELEFONO, USU_CORREO, USU_CONTRASENA,USU_ROL)
-                  VALUES
-                  (? , ? , ? , ?, ?, ?)";
-          $s = $c->prepare($sql);
-          $v = array($datos["nombres"],$datos["apellidos"],$datos["telefono"],$datos["correo"],sha1($datos["contrasena"]),$datos["srol"]);        
-          return $s->execute($v);
-        }
+    $o = new conexion();
+    $c = $o->getConexion();
+    $sql = "INSERT INTO t_usuario
+            (USU_NOMBRES, USU_APELLIDOS, USU_TELEFONO, USU_CORREO, USU_CONTRASENA,USU_ROL)
+            VALUES
+            (? , ? , ? , ?, ?, ?)";
+    $s = $c->prepare($sql);
+    $v = array($datos["nombres"],$datos["apellidos"],$datos["telefono"],$datos["correo"],sha1($datos["contrasena"]),$datos["srol"]);        
+    return $s->execute($v);
+  }
         //funcion de editar
         public static function mdlBuscarXID($cli_id){
             $o = new conexion();
@@ -36,15 +36,21 @@ class cliente_modelo{
     public static function mdlEditar($datos){
       $o = new conexion();
       $c = $o->getConexion();
-      $sql = "UPDATE t_usuario SET USU_NOMBRES = ?, USU_APELLIDOS = ?, USU_TELEFONO = ?, USU_CORREO = ?,  USU_ROL = ? WHERE USU_ID = ?";       
+      $sql = "UPDATE t_usuario SET
+       USU_NOMBRES   = ?,
+       USU_APELLIDOS = ?,
+       USU_TELEFONO  = ?,
+       USU_CORREO    = ?, 
+       USU_ROL       = ? 
+       WHERE USU_ID  = ?";       
       $s = $c->prepare($sql);
       $v = array(
         $datos["usu_nombres"],
         $datos["usu_apellidos"],
         $datos["usu_telefono"],
         $datos["usu_correo"],
-        $datos["usu_rol"]
-        ,$datos["usu_id"]
+        $datos["usu_rol"],
+        $datos["usu_id"]
         );        
       return $s->execute($v);
     }

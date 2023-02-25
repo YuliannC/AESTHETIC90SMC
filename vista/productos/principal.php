@@ -12,10 +12,10 @@
 			<div class="promo_link"><a href="?controlador=productos&accion=frmRegistrar">Registrar un nuevo producto</a></div>
 			<br>
 			<div class="search" style="width:100%;">
-			<form action="?controlador=productos&accion=consultarXnombre" method="post">
-				<input type="search" class="search_input menu_mm" required="required" placeholder="Buscar un producto">
-				<button type="submit" id="search_button_menu" class="search_button menu_mm"><img class="menu_mm" src="public/images/magnifying-glass.svg" alt=""></button>
-			</form>
+			<div class="input-group input-group-outline mb-3">
+                <input type="text" class="search_input menu_mm" name="fecha" id="fecha" placeholder="Buscar producto por su nombre">
+              </div>
+              <div id="resultado"></div>
 		</div> <hr>
 				
 

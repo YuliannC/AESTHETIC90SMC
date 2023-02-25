@@ -1,21 +1,18 @@
 
-<br><br>
-<title>LISTA DE PQR</title>
+<br><br><br><br><br>
     <div class="ol-lg-8">
-                <div class="card">
                   <div class="bg-gradient-dark shadow-dark border-radius-lg pt-4 pb-3">
-                   <h6 class="text-white text-capitalize ps-3">LISTADO DE PQR</h6>
+                   <h6 class="text-black text-capitalize ps-3">LISTADO DE PQR</h6>
                   </div>
-                  <div class="card-body">
                     <table class="table table-Light table-hover border-radius-lg pt-4 pb-3 ">
                       <tr>
-                        <th class="aling-middle text-center ">Nombres</th>
-                        <th class="aling-middle text-center ">Apellidos</th>
-                        <th class="aling-middle text-center ">Telefono</th>
-                        <th class="aling-middle text-center ">Correo</th>
-                        <th class="aling-middle text-center ">Descripcion</th>
-                        <th class="aling-middle text-center "></th>
-                        <th class="aling-middle text-center "></th>
+                        <th class="text-uppercase text-primary font-weight-bolder opacity-10">Nombres</th>
+                        <th class="text-uppercase text-primary font-weight-bolder opacity-10">Apellidos</th>
+                        <th class="text-uppercase text-primary font-weight-bolder opacity-10 ">Telefono</th>
+                        <th class="text-uppercase text-primary font-weight-bolder opacity-10">Correo</th>
+                        <th class="text-uppercase text-primary font-weight-bolder opacity-10 ">Descripcion</th>
+                        <th class="text-uppercase text-primary font-weight-bolder opacity-10">ESTADO</th>
+                        <th class="text-uppercase text-primary font-weight-bolder opacity-10"></th>
                         
                       </tr>
                       <tr>
@@ -24,15 +21,14 @@
                               $id = $valor["CON_ID"];
                                 echo "<tr>";
                                           
-                                  echo "<td class='aling-middle text-center '>".$valor["CON_NOMBRES"]."</td>";
-                                  echo "<td class='aling-middle text-center '>".$valor["CON_APELLIDO"]."</td>";
-                                  echo "<td class='aling-middle text-center '>".$valor["CON_TELEFONO"]."</td>";
-                                  echo "<td class='aling-middle text-center '>".$valor["CON_CORREO"]."</td>";
-                                  echo "<td class='aling-middle text-center '>".$valor["CON_DESCRIPCION"]."</td>";
-                                  echo "<td class='aling-middle text-center'><a  href='?controlador=cliente&accion=frmEditar&cli_id=$id'class='btn btn-info'>
-                                  Editar</a></td>";
-                                  echo "<td class='aling-middle text-center'><a href='?controlador=cliente&accion=eliminar&cli_id=$id'class='btn btn-danger'>
-                                  Eliminar</a></td>";
+                                  echo "<td class='atext-uppercase text-primary font-weight-bolder opacity-10'>".$valor["CON_NOMBRES"]."</td>";
+                                  echo "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>".$valor["CON_APELLIDO"]."</td>";
+                                  echo "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>".$valor["CON_TELEFONO"]."</td>";
+                                  echo "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>".$valor["CON_CORREO"]."</td>";
+                                  echo "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>".$valor["CON_DESCRIPCION"]."</td>";
+                                  echo "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>".$valor["CON_ESTADO"]."</td>";
+                                  echo "<td class='s'><a href='?controlador=administrador&accion=eliminar&id=$id' class='eliminar btn btn-info'>
+                                  Solucionado</a></td>";
                                 echo "</tr>";
                             }
                           ?>
@@ -40,4 +36,5 @@
                     </table>
                   </div>
                 </div>
+              </div>
               </div>

@@ -29,27 +29,27 @@
          <h1 class="">Subir productos</h1>
          <form action="recursos/subir.php" method="post" enctype="multipart/form-data">
           <div class="form-group">
-              <label for="my-input">Seleccione una Imagen</label>
+              Seleccione una Imagen
               <input id="my-input"  type="file" name="imagen">
           </div>
           <div class="form-group">
-              <label for="my-input">Nombre del producto</label>
+              Nombre del producto
               <input id="my-input" class="form-control" type="text" name="titulo">
           </div>
           <div class="form-group">
-              <label for="my-input">Cantidad</label>
+              Cantidad
               <input id="my-input" class="form-control" type="text" name="cantidad">
           </div>
           <div class="form-group">
-              <label for="my-input">Descripcion</label>
+              Descripcion
               <input id="my-input" class="form-control" type="text" name="descripcion">
           </div>
           <div class="form-group">
-              <label for="my-input">Precio</label>
+              Precio
               <input id="my-input" class="form-control" type="number" name="precio">
           </div>
           <div class="form-group">
-              <label for="my-input">Color</label>
+              Color
               <input id="my-input" class="form-control" type="text" name="color">
           </div>
           <?php if(isset($_SESSION['mensaje'])){ ?>

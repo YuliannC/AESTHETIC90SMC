@@ -36,7 +36,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="public/plugins/parallax-js-master/parallax.min.js"></script>
 <script src="public/plugins/colorbox/jquery.colorbox-min.js"></script>
 <script src="public/js/custom.js"></script>
-
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

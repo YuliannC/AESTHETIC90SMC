@@ -6,8 +6,11 @@
 
 		<nav class="menu_nav">
 			<ul class="menu_mm">
-				<li class="menu_mm"><a href="?controlador=administrador&accion=principal">Inicio</a></li>
-				<li class="menu_mm"><a href="?controlador=cliente&accion=principal">Clientes</a></li>
+
+
+
+
+      <li class="menu_mm"><a href="?controlador=cliente&accion=principal">Clientes</a></li>
 				<li class="menu_mm"><a href="?controlador=proveedores&accion=principal">Proveedores</a></li>
 				<li class="menu_mm"><a href="?controlador=productos&accion=principal">Productos</a></li>
 				<li class="menu_mm"><a href="?controlador=administrador&accion=listarPQR">PQR</a></li>

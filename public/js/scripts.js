@@ -100,7 +100,7 @@ $(function () {
     });
     $("#mat").keyup(function(){
         var x = $(this).val();
-        var url = "?controlador=coche&accion=consultarByMatricula";
+        var url = "?controlador=proveedores&accion=consultarByMatricula";
         $.post(url, "matricula="+x, function(e){
             $("#resultado").html(e.mensaje);
         },'json');
@@ -120,6 +120,18 @@ $(function () {
             if (apellidos == '') {
                 $("#resultado").html('');
             } else {
+                $("#resultado").html(e.mensaje);
+            }
+        }, 'json');
+    });
+    $("#fecha").keyup(function(){
+        var fecha = $(this).val();
+        var url ="?controlador=productos&accion=consultarXfecha";
+
+        $.post(url, "fecha="+fecha, function(e){
+            if(fecha == ''){
+                $("#resultado").html('');
+            }else{
                 $("#resultado").html(e.mensaje);
             }
         }, 'json');
@@ -170,13 +182,13 @@ $(function () {
         cancelButtonText: 'No, quiero conservarlo'
       }).then((result) => {
         if (result.isConfirmed) {
-            $.get(url,'', function(e){
+            $.get(url,'',
+             function(e){
                 $(this).closest("tr").remove(); 
                 Swal.fire(
                     // 'Eliminado',
                     // 'El cliente ha sido eliminado.',
                     // 'success'
-                    
                     e.mensaje,
                     '',
                     e.icono

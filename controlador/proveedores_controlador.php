@@ -69,50 +69,87 @@ class proveedores_controlador{
         $id   = $_GET["id"];
         $r    = proveedores_modelo::mdlEliminar($id);
         if($r > 0){
-            echo json_encode(array("mensaje" => "Producto borrado", "icono"=> "success"));
+            echo json_encode(array("mensaje" => "proveedor borrado", "icono"=> "success"));
           
         }else{
-            echo json_encode(array("mensaje" => "Error al borrar un cliente",
+            echo json_encode(array("mensaje" => "Error al borrar un proveedor",
                         "icono"=> "error"));
         }
       }
-      public function consultarBynombre(){
+      public function consultarByMatricula(){
         extract($_POST);
-        $datos = proveedores_modelo::mdlconsultarByApellido($nombre);
+        $datos = proveedores_modelo::mdlconsultarByMatricula($matricula);
         $tbl   = "<table class='table'>";
         $tbl   .= "<tr>";
+        $tbl   .= "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>NIT</td>";
         $tbl   .= "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>NOMBRE</td>";
         $tbl   .= "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>TELEFONO</td>";
         $tbl   .= "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>DIRECCION</td>";
         $tbl   .= "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>SECCION</td>";
-        $tbl   .= "<td>ESTADO</td>";
         $tbl   .= "</tr>";
         foreach($datos as $v){
-        $id= $v["PROV_ID"];
-        $e = "<a href='?controlador=proveedores&accion=eliminar&id=$id' class='btn btn-light'>Eliminar</a>";
-        $ed = "<a href='?controlador=proveedores&accion=frmEditar&id=$id' class='btn btn-light'>Editar</a>";
-        $f ="<a  href='?controlador=proveedores&accion=frmDetalles&cli_id=$id'class='btn btn-light'>
-        Detalles</a>";
+        $id = $v["PROV_ID"];
+        $e = "<a href='?controlador=proveedores&accion=eliminar&id=$id' class='eliminar'>Eliminar</a>";
+        $ed = "<a href='?controlador=proveedores&accion=frmEditar&id=$id' class='search_input menu_mm'>Editar</a>";
+        // $d ="<a  href='?controlador=proveedores&accion=frmDetalles&co_id=$id'class='btn btn-light'>
+        //     Detalles</a>";
         $estado = $v["PROV_ESTADO"] == 1 ? "ACTIVO":"INACTIVO";
         $tbl   .= "<tr>";
-        $tbl   .= "<td>".$v["CLI_NOMBRES"]."</td>";
-        $tbl   .= "<td>".$v["CLI_APELLIDOS"]."</td>";
-        $tbl   .= "<td>".$v["CLI_DOCUMENTO"]."</td>";
-        $tbl   .= "<td>".$v["CLI_CODIGO"]."</td>";
-        // $tbl   .= "<td>$estado</td>";
-        // $tbl   .= "<td>".$v["CLI_ROL"]."</td>";
+        $tbl   .= "<td>".$v["PROV_NIT"]."</td>";
+        $tbl   .= "<td>".$v["PROV_NOMBRE"]."</td>";
+        $tbl   .= "<td>".$v["PROV_TELEFONO"]."</td>";
+        $tbl   .= "<td>".$v["PROV_DIRECCION"]."</td>";
+        $tbl   .= "<td>".$v["PROV_SECCION"]."</td>";
         $tbl   .= "<td>$ed</td>";
         $tbl   .= "<td>$e</td>";
-        $tbl   .= "<td>$f</td>";
+        // $tbl   .= "<td>$d</td>";
         $tbl   .= "</tr>";
     }
         $tbl   .= "</table>";
-        if($apellidos == ''){
+        if($matricula == ''){
             echo json_encode(array("mensaje"=>''));
         }else{
         echo json_encode(array("mensaje"=>$tbl));
     }
-    }
+      }
+    //   public function consultarBynombre(){
+    //     extract($_POST);
+    //     $datos = proveedores_modelo::mdlconsultarBynombre($nombre);
+    //     $tbl   = "<table class='table'>";
+    //     $tbl   .= "<tr>";
+    //     $tbl   .= "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>NOMBRE</td>";
+    //     $tbl   .= "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>TELEFONO</td>";
+    //     $tbl   .= "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>DIRECCION</td>";
+    //     $tbl   .= "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>SECCION</td>";
+    //     $tbl   .= "<td class='text-uppercase text-primary font-weight-bolder opacity-10'>NIT</td>";
+    //     $tbl   .= "<td>ESTADO</td>";
+    //     $tbl   .= "</tr>";
+    //     foreach($datos as $v){
+    //     $id= $v["PROV_ID"];
+    //     $e = "<a href='?controlador=proveedores&accion=eliminar&id=$id' class='btn btn-light'>Eliminar</a>";
+    //     $ed = "<a href='?controlador=proveedores&accion=frmEditar&id=$id' class='btn btn-light'>Editar</a>";
+    //     // $f ="<a  href='?controlador=proveedores&accion=frmDetalles&cli_id=$id' class='btn btn-light'>
+    //     // Detalles</a>";
+    //     $estado = $v["PROV_ESTADO"] == 1 ? "ACTIVO":"INACTIVO";
+    //     $tbl   .= "<tr>";
+    //     $tbl   .= "<td>".$v["PROV_NOMBRE"]."</td>";
+    //     $tbl   .= "<td>".$v["PROV_TELEFONO"]."</td>";
+    //     $tbl   .= "<td>".$v["PROV_DIRECCION"]."</td>";
+    //     $tbl   .= "<td>".$v["PROV_SECCION"]."</td>";
+    //     $tbl   .= "<td>".$v["PROV_NIT"]."</td>";
+    //     $tbl   .= "<td>$estado</td>";
+    //     // $tbl   .= "<td>".$v["CLI_ROL"]."</td>";
+    //     $tbl   .= "<td>$ed</td>";
+    //     $tbl   .= "<td>$e</td>";
+    //     $tbl   .= "</tr>";
+    // }
+    //     $tbl   .= "</table>";
+    //     if($nombre == ''){
+    //         echo json_encode(array("mensaje"=>''));
+    //     }else{
+    //     echo json_encode(array("mensaje"=>$tbl));
+    // }
+    // }
     public function frmDetalles(){
         $id = $_GET["PROV_ID"];
         $this->vista->datos=proveedores_modelo::mdlDetalles($id);
@@ -122,27 +159,8 @@ class proveedores_controlador{
         session_destroy();
         header("location: /APPAUTOMOTRIZ");
     }
-    public function validar(){
-        extract($_POST);
-        $datos["usuario"] = $usuario;
-        $datos["password"] = $password;
-        $r=cliente_modelo::mdlvalidar($datos);
-        if($r > 0){
-            $_SESSION["CLI_NOMBRES"]   =$r["CLI_NOMBRES"];
-            $_SESSION["CLI_APELLIDOS"] =$r["CLI_APELLIDOS"];
-            $_SESSION["CLI_ROL"]       =$r["CLI_ROL"];
-            $_SESSION["CLI_ID"]        =$r["CLI_ID"];
-            echo json_encode(array(
-                "mensaje" => "Yulianna", 
-                "icono" => "succes", 
-                "URL" => "?controlador=inicio&accion=principal"));
-        }else{
-            echo json_encode(array("mensaje" => "Usuario / Contraseña errados", "icono" => "error"));
-        }
-        
-    }
-    public function reporteProductos(){
-        $this->vista->datos = cliente_modelo::mdlListar();
+    public function reporteProveedores(){
+        $this->vista->datos = proveedores_modelo::mdlListar();
         $this->vista->unirContenido("cliente/ReporteClientes", false);
     }
 }

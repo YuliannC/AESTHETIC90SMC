@@ -23,7 +23,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="promo_link"><a href="?controlador=cliente&accion=">Registrar un nuevo cliente</a></div>
+			<div class="promo_link"><a href="?controlador=cliente&accion=frmRegistro">Registrar un nuevo cliente</a></div>
 			<br>
 			<div class="input-group input-group-outline mb3">
                   <label class="form-label"></label>

@@ -52,7 +52,7 @@ class administrador_modelo{
   public static function mdlEliminar($datos){
     $o = new conexion();
     $c = $o->getConexion();
-    $sql = "UPDATE t_clientes SET CLI_ESTADO = 2 WHERE CLI_ID = ?";
+    $sql = "UPDATE t_contacto SET CON_ESTADO = 2 WHERE CON_ID = ?";
     $s = $c->prepare($sql);
     $v = array($datos);        
     return $s->execute($v);

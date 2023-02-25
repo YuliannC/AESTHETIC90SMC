@@ -42,13 +42,13 @@ class cliente_controlador{
         $datos["srol"]  = $srol;
 
         $r = cliente_modelo::mdlRegistrar($datos);
-        if($r > 0)
-         {
-          echo json_encode(array("mensaje"=> "Registrado","icono"=>"succcess"));
-         } 
-         else{
-            echo json_encode(array("mensaje"=> "Error al registrar","icono"=>"error"));
-         }
+        if($r > 0){
+            echo json_encode(array("mensaje" => "Cliente registrado",
+                            "icono"=> "success"));
+            }else{
+                echo json_encode(array("mensaje" => "Error al registrar un cliente",
+                            "icono"=> "error"));
+            }
     }
     public function validar(){
         extract($_POST);
@@ -89,7 +89,7 @@ class cliente_controlador{
         $id=$v["USU_ID"];
         $e="<td class='aling-middle text-center'><a  href='?controlador=cliente&accion=frmEditar&cli_id=$id'class='btn btn-info'>
         Editar</a></td>";
-        $ed = "<td class='aling-middle text-center'><a href='?controlador=cliente&accion=eliminar&cli_id=$id'class='btn btn-danger'>
+        $ed = "<td><a href='?controlador=cliente&accion=eliminar&cli_id=$id' class='eliminar'>
         Eliminar</a></td>";
         $tbl.= "<tr>";
         $tbl.= "<td class='aling-middle text-center'>".$v["USU_NOMBRES"]."</td>";
@@ -108,13 +108,13 @@ class cliente_controlador{
   }
   public function editar(){
     extract($_POST);
-    $datos["usu_nombres"] = $nombres;
-    $datos["usu_apellidos"] = $apellidos;
-    $datos["usu_telefono"] = $telefono;
-    $datos["usu_correo"] = $correo;
-    $datos["usu_contrasena"]  = $contrasena;
-    $datos["usu_rol"]  = $srol;
-    $datos["usu_id"]  = $id;
+    $datos["nombres"] = $nombres;
+    $datos["apellidos"] = $apellidos;
+    $datos["telefono"] = $telefono;
+    $datos["correo"] = $correo;
+    $datos["contrasena"]  = $contrasena;
+    $datos["srol"]  = $srol;
+    $datos["cli_id"]  = $id;
     $r = cliente_modelo::mdleditar($datos);
     if( $r > 0){
         echo json_encode(array("mensaje" => "Editado Correctamente" , "icono"=>"success"));
@@ -126,9 +126,9 @@ class cliente_controlador{
     $id = $_GET["cli_id"];
     $e=cliente_modelo::mdleliminar($id);
     if($e > 0){
-        echo json_encode(array("mensaje" => "Se elimino cliente" ,"icono"=>"success"));
+        echo json_encode(array("mensaje" => "Se elimino cliente" , "icono"=>"success"));
     }else{
-        echo json_encode(array("mensaje" => "No se  elimino cliente " ,"icono"=>"Error"));
+        echo json_encode(array("mensaje" => "No se elimino" , "icono"=>"error"));
     }
  }
 }

@@ -16,7 +16,7 @@
 	</div>
 
 	<!-- FIN DE MENU -->
-  
+<!--   
 <div class="container-fluid py-4">
       <div class="row">
         <div class="col-12">
@@ -30,25 +30,25 @@
               <div class="card-body">
                 <div class="row">
                   <div class="col-lg-3">
-                    <form action="?controlador=proveedores&accion=Registrar" autocomplete="off" id="frmRegistro" method="post">
+                    <form action="?controlador=proveedores&accion=Registrar" autocomplete="off" id="frmReg" method="post">
                    
                     <div class="input-group input-group-outline mb-3">
-                    <label class="form-label">Nombre</label>
+                    Nombre
                     <input type="text" name="nombre" class="form-control">
                     </div>
 
                     <div class="input-group input-group-outline mb-3">
-                    <label class="form-label">telefono</label>
+                    telefono
                     <input type="number" name="telefono" class="form-control">
                     </div>
 
                     <div class="input-group input-group-outline mb-3">
-                    <label class="form-label">direccion</label>
+                    direccion
                     <input type="text" name="direccion" class="form-control">
                     </div>
 
                     <div class="input-group input-group-outline mb-3">
-                    <label class="form-label">secciones</label>
+                    secciones
                     <input type="text" name="seccion" class="form-control">
                     </div>
                     
@@ -64,4 +64,29 @@
           </div>
         </div>
       </div>
-      </div>
+      </div> -->
+
+      <br><br><br><br>
+      <form action="?controlador=proveedores&accion=Registrar" autocomplete="off" id="frmReg" method="post" name="formDatosPersonales">
+			<h2 style="color:black; text-align:center;">Registrar Proveedores</h2>
+					<br>	
+			<label for="nombre">Nombre</label>
+			<input type="text" name="nombre" id="nombre" required placeholder="nombre"/>
+			<br><br>
+			<label for="apellidos">Telefono</label>
+			<input type="number" name="telefono" id="telefono" placeholder="telefono" required/>
+			<br><br>
+			<label for="email" >Direccion</label>
+			<input type="text" name="direccion" id="direccion" placeholder="direccion" required />
+			<br><br>
+      <select class="form-control" name="seccion" id="seccion">  
+          <option value="Administrador">Pant</option>
+          <option value="Cliente">top</option>
+          <option value="Cliente">vestido</option>
+          <option value="Cliente">conjunto</option>
+          <option value="Cliente">chaqueta</option>
+          <option value="Cliente">corset</option>
+      </select>
+			<input type="submit" name="aceptar" value="enviar datos">
+
+			</form>
