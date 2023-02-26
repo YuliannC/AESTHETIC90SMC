@@ -1,7 +1,7 @@
 <br><br><br><br><br><br><br>
 <?php 
   include('recursos/conexion2.php');
-  $query = "select * from imagenes ";
+  $query = "select * from imagenes where seccion= "vestido" ";
   $resultado = mysqli_query($conn,$query);
 ?>
 <br><br><br>

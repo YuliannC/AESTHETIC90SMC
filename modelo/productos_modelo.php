@@ -3,14 +3,17 @@ class productos_modelo{
     public static function mdlRegistrar($datos){
         $obj = new conexion();
         $con = $obj -> getConexion();
-        $sql = "INSERT INTO T_TP_REVISION
-        (TPREV_REV_ID , TPREV_FECHA	, TPREV_TIPO, TPREV_OBS)VALUES(?, ?, ?, ?)";
+        $sql = "INSERT INTO imagenes
+        (nombre , imagen, descripcion, precio, cantidad, colores)
+        VALUES(?, ?, ?, ?, ?, ?)";
         $s = $con->prepare($sql);
         $v = array(
-            $datos["tprev_rev_codigo"],
-            $datos["tprev_fecha"],
-            $datos["tprev_tipo"],
-            $datos["tprev_obs"]
+            $datos["nombre"],
+            $datos["imagen"],
+            $datos["descripcion"],
+            $datos["precio"],
+            $datos["cantidad"],
+            $datos["color"]
         );
         return $s->execute($v);
     }
@@ -42,8 +45,7 @@ class productos_modelo{
     public static function mdlDetalles($id){
         $obj = new conexion();
         $con = $obj -> getConexion();
-        $sql = "SELECT * FROM T_TP_REVISION 
-        INNER JOIN T_REVISION ON REV_ID = TPREV_REV_ID WHERE TPREV_ID = ?";
+        $sql = "SELECT * FROM imagenes WHERE cod_imagen = ?";
         $s   = $con->prepare($sql);
         $v   = array($id);
         $s->execute($v); 

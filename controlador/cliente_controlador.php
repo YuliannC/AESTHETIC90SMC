@@ -27,6 +27,9 @@ class cliente_controlador{
     public function frmRegistro(){
         $this->vista->unirContenido("cliente/frmRegistro");
     }
+    public function detalles(){
+        $this->vista->unirContenido("cliente/detalle");
+    }
     public function frmEditar(){
       //  $id = $_GET["cli_id"];
       // $this->vista->datos=cliente_modelo::consultarId($id);

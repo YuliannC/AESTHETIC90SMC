@@ -31,9 +31,14 @@ class productos_controlador{
     }
     public function detalles(){
         $this->vista->unirContenido("productos/detalle");
+        // $id = $_GET["id"];
+        // $this->vista->datos=productos_modelo::mdlDetalles($id);
     }
     public function verbolsa(){
         $this->vista->unirContenido("productos/bolsa");
+    }
+    public function detallesss(){
+        $this->vista->unirContenido("productos/detalless");
     }
     public function listarProduct(){
         $this->vista->unirContenido("productos/listadoProductos");
@@ -43,12 +48,12 @@ class productos_controlador{
         $datos["prov_pro"]  = $prov_id;
         $re=proveedoores_modelo::mdlBuscarXCOD($prov_id);
         // $datos["tprev_rev_id"]    = $rev_id;
-        $datos["PRO_NOMBRE"]      = $nombres;
-        $datos["PRO_DESCRIPCION"]       = $descripcion;
-        $datos["PRO_CANTIDAD"]        = $cantidad;
-        $datos["PRO_FOTO"]        = $foto;
-        $datos["PRO_COLORES"]        = $colores;
-        $datos["PRO_PRECIO"]        = $precio;
+        $datos["imagen"]      = $imagen;
+        $datos["nombre"]      = $titulo;
+        $datos["descripcion"] = $descripcion;
+        $datos["precio"]      = $precio;
+        $datos["cantidad"]    = $cantidad;
+        $datos["colores"]     = $color;
 
 
         if($re > 0){
