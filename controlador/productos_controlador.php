@@ -12,7 +12,10 @@ class productos_controlador{
         $this->vista->unirContenido("productos/principal");
     }
     public function frmRegistrar(){
-        $this->vista->unirContenido("productos/frmRegistro");
+        if($_SESSION['USU_ROL'] == "Administrador" )
+                $this->vista->unirContenido("productos/frmRegistro");
+        else
+            header("location: ?controlador=inicio&accion=principal");
     }
     public function vercarrito(){
         $this->vista->unirContenido("productos/carrito");

@@ -42,7 +42,6 @@ class cliente_controlador{
         $datos["apellidos"] = $apellidos;
         $datos["telefono"] = $telefono;
         $datos["correo"] = $correo;
-        $datos["contrasena"]  = $contrasena;
         $datos["srol"]  = $srol;
         $datos["password"] = $telefono;
 
