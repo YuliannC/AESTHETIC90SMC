@@ -4,11 +4,11 @@ class cliente_modelo{
     $o = new conexion();
     $c = $o->getConexion();
     $sql = "INSERT INTO t_usuario
-            (USU_NOMBRES, USU_APELLIDOS, USU_TELEFONO, USU_CORREO, USU_CONTRASENA,USU_ROL)
+            (USU_NOMBRES, USU_APELLIDOS, USU_TELEFONO, USU_CORREO, USU_CONTRASENA, USU_ROL, USU_PASS)
             VALUES
-            (? , ? , ? , ?, ?, ?)";
+            (? , ? , ? , ?, ?, ?, ?)";
     $s = $c->prepare($sql);
-    $v = array($datos["nombres"],$datos["apellidos"],$datos["telefono"],$datos["correo"],sha1($datos["contrasena"]),$datos["srol"]);        
+    $v = array($datos["nombres"],$datos["apellidos"],$datos["telefono"],$datos["correo"],$datos["contrasena"],$datos["srol"],sha1($datos["password"]));        
     return $s->execute($v);
   }
         //funcion de editar
@@ -92,21 +92,14 @@ class cliente_modelo{
     public static function mdlvalidar($datos){
       $o = new conexion();
       $c =$o->getConexion();
-     $sql = "SELECT * FROM t_usuario WHERE USU_CORREO = ? AND USU_CONTRASENA = ?";
+     $sql = "SELECT * FROM t_usuario WHERE USU_TELEFONO = ? AND USU_PASS = ?";
       $s= $c->prepare($sql);
       $v= array($datos["usuario"], sha1($datos["password"]));
       $s-> execute($v);
       return $s->fetch();
     }
-    // public static function mdlvalidar($datos){
-    //   $obj = new conexion();
-    //     $con = $obj -> getConexion();
-    //     $sql = "SELECT * FROM t_usuario WHERE USU_CORREO= ? AND USU_CONTRASENA=?";
-    //     $s   = $con->prepare($sql);
-    //     $v   = array($datos["correo"], Sha1($datos["contrasena"]));
-    //     $s->execute($v); 
-    //     return $s->fetch();
-    // }
+
+
 }
 
 

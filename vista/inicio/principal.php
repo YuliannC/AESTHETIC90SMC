@@ -247,11 +247,10 @@
         <div class="col-md-3 col-md-offset-9 text-right" >
 		
             <div class="btn-group" role="group">
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<div class="button extra_2_button"><a href="?controlador=productos&accion=vervestido">vestidos</a></div>&nbsp;&nbsp;&nbsp;
-				<div class="button extra_2_button"><a href="?controlador=productos&accion=vertops">tops</a></div>&nbsp;&nbsp;&nbsp;
+				<div class="button extra_2_button"><a href="?controlador=productos&accion=verchaquetas">chaquetas</a></div>&nbsp;&nbsp;&nbsp;
 				<div class="button extra_2_button"><a href="?controlador=productos&accion=verpant">pants</a></div>&nbsp;&nbsp;&nbsp;
-				<div class="button extra_2_button"><a href="?controlador=productos&accion=verfalda">faldas</a></div>&nbsp;&nbsp;&nbsp;
 				<div class="button extra_2_button"><a href="?controlador=productos&accion=verconjunto">conjuntos</a></div>&nbsp;&nbsp;&nbsp;
 				
             </div>
@@ -270,17 +269,31 @@
 
 	<!-- <a href="facebook.com"><img src="public/images/corsett.jpeg"></a> -->
 	<section>
+		<a class="aa" href="">
 		<img src="public/images/corsett.jpeg" >
+		</a>
+		<a href="" class="aa">
 		<img src="public/images/pieza.jpeg" alt="">
+		</a>
+		<a href="" class="aa">
 		<img src="public/images/hay.jpeg" alt="">
+		</a>
+		<a href="" class="aa">
 		<img src="public/images/conjun.jpeg" alt="">
+		</a>
+		<a href="" class="aa">
 		<img src="public/images/producto_7.jpeg" alt="">
+		</a>
 		
 		<!-- <img src="public/images/conj.jpeg" alt="">
 		<img src="public/images/product_5.jpg" alt="">
 		<img src="public/images/product_1.jpg" alt=""> -->
 		</section>
 	<style>
+		.aa{
+         visibility:hidden;
+		 display: none;
+		}
 		section{
 			display: flex;
 			width: 1350px;

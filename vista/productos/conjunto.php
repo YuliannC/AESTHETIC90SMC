@@ -19,7 +19,7 @@
 <br><br><br><br><br><br>
 <?php 
   include('recursos/conexion2.php');
-  $query = "SELECT * FROM imagenes WHERE estado=1 AND secciones= 1 ORDER BY cod_imagen DESC";
+  $query = "SELECT * FROM imagenes WHERE estado=1 AND secciones= 6 ORDER BY cod_imagen DESC";
   $resultado = mysqli_query($conn,$query);
 ?>
 <div class="search" style="width:100%;">
@@ -28,12 +28,11 @@
 				<button type="submit" id="search_button_menu" class="search_button menu_mm"><img class="menu_mm" src="public/images/magnifying-glass.svg" alt=""></button>
 			</form>
 		</div>
-		<div class="row">
+    <div class="row">
         <div class="col-md-3 col-md-offset-9 text-right" >
 		
             <div class="btn-group" role="group">
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			    <div class="button extra_2_button"><a href="?controlador=productos&accion=vercorset">corset</a></div>&nbsp;&nbsp;&nbsp;
 				<div class="button extra_2_button"><a href="?controlador=productos&accion=vervestido">vestidos</a></div>&nbsp;&nbsp;&nbsp;
 				<div class="button extra_2_button"><a href="?controlador=productos&accion=verchaquetas">chaquetas</a></div>&nbsp;&nbsp;&nbsp;
 				<div class="button extra_2_button"><a href="?controlador=productos&accion=verpant">pants</a></div>&nbsp;&nbsp;&nbsp;

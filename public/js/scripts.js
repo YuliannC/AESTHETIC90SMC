@@ -167,6 +167,7 @@ $(function () {
         },'json');
         return false;
    });
+
    $(document).on('click', '.eliminar', function(e){
     var url = $(this).attr("href");
     var elemento = $(this);
@@ -198,5 +199,7 @@ $(function () {
       })
     return false;
 });
+
+
 
 });

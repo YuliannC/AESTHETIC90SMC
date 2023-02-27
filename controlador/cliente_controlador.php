@@ -28,11 +28,12 @@ class cliente_controlador{
         $this->vista->unirContenido("cliente/frmRegistro");
     }
     public function detalles(){
+        $this->vista->datos = cliente_modelo::mdldetalle();
         $this->vista->unirContenido("cliente/detalle");
     }
     public function frmEditar(){
-      //  $id = $_GET["cli_id"];
-      // $this->vista->datos=cliente_modelo::consultarId($id);
+       $id = $_GET["cli_id"];
+      $this->vista->datos=cliente_modelo::mdlBuscarXID($id);
        $this->vista->unirContenido("cliente/frmEditar");
     }
     public function Registrar(){
@@ -43,6 +44,7 @@ class cliente_controlador{
         $datos["correo"] = $correo;
         $datos["contrasena"]  = $contrasena;
         $datos["srol"]  = $srol;
+        $datos["password"] = $telefono;
 
         $r = cliente_modelo::mdlRegistrar($datos);
         if($r > 0){
@@ -62,10 +64,32 @@ class cliente_controlador{
             $_SESSION["USU_NOMBRES"]   =$r["USU_NOMBRES"];
             $_SESSION["USU_APELLIDOS"] =$r["USU_APELLIDOS"];
             $_SESSION["USU_TELEFONO"]  =$r["USU_TELEFONO"];
+            $_SESSION["USU_ROL"]       =$r["USU_ROL"];
+            $_SESSION["USU_ID"]        =$r["USU_ID"];
             echo json_encode(array(
                 "mensaje" => "yulianna", 
                 "icono" => "succes", 
-                "URL" => "?controlador=inicio&accion=principal"));
+                "URL" => "?controlador=productos&accion=vercarrito"
+            ));
+        }else{
+            echo json_encode(array("mensaje" => "Usuario / Contraseña errados", "icono" => "error"));
+        }
+        
+    }
+    public function validar1(){
+        extract($_POST);
+        $datos["usuario"] = $usuario;
+        $datos["password"] = $password;
+        $r=cliente_modelo::mdlvalidar($datos);
+        if($r > 0){
+            $_SESSION["CLI_NOMBRES"]   =$r["CLI_NOMBRES"];
+            $_SESSION["CLI_APELLIDOS"] =$r["CLI_APELLIDOS"];
+            $_SESSION["CLI_ROL"]       =$r["CLI_ROL"];
+            $_SESSION["CLI_ID"]        =$r["CLI_ID"];
+            echo json_encode(array(
+                "mensaje" => "Yulianna", 
+                "icono" => "succes", 
+                "URL" => "?controlador=productos&accion=vercarrito"));
         }else{
             echo json_encode(array("mensaje" => "Usuario / Contraseña errados", "icono" => "error"));
         }

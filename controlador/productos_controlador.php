@@ -20,18 +20,22 @@ class productos_controlador{
     public function vervestido(){
         $this->vista->unirContenido("productos/vestidos");
     }
-    public function verfalda(){
-        $this->vista->unirContenido("productos/pant");
+    public function vercorset(){
+        $this->vista->unirContenido("productos/corset");
     }
     public function verconjunto(){
         $this->vista->unirContenido("productos/pant");
+    }
+    public function verchaquetas(){
+        $this->vista->unirContenido("productos/chaqueta");
     }
     public function verpant(){
         $this->vista->unirContenido("productos/pant");
     }
     public function detalles(){
+        $id = $_GET["id"];
+        $this->vista->datos=productos_modelo::mdlDetalles($id);
         $this->vista->unirContenido("productos/detalle");
-        // $id = $_GET["id"];
         // $this->vista->datos=productos_modelo::mdlDetalles($id);
     }
     public function verbolsa(){
@@ -136,6 +140,7 @@ class productos_controlador{
         $tbl   .= "<td>$ed</td>";
         $tbl   .= "<td>$e</td>";
         $tbl   .= "<td>$d</td>";
+        $tbl   .= "<td>$estado</td>";
         $tbl   .= "</tr>";
     }
         $tbl   .= "</table>";

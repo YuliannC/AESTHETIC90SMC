@@ -19,7 +19,7 @@
 <br><br><br><br><br><br>
 <?php 
   include('recursos/conexion2.php');
-  $query = "SELECT * FROM imagenes WHERE estado=1 AND secciones= 1 ORDER BY cod_imagen DESC";
+  $query = "SELECT * FROM imagenes WHERE estado=1 AND secciones= 5 ORDER BY cod_imagen DESC";
   $resultado = mysqli_query($conn,$query);
 ?>
 <div class="search" style="width:100%;">

@@ -8,6 +8,7 @@ if(isset($_POST['Guardar'])){
     $precio = $_POST['precio'];
     $cantidad = $_POST['cantidad'];
     $color = $_POST['color'];
+    $seccion = $_POST['secciones'];
 
 
     if(isset($imagen) && $imagen != ""){
@@ -19,7 +20,7 @@ if(isset($_POST['Guardar'])){
           $_SESSION['tipo'] = 'danger';
           header('location:../index.php');
        }else{
-         $query = "INSERT INTO imagenes(imagen,nombre,cantidad,descripcion,precio,colores) values('$imagen','$nombre','$cantidad','$descripcion','$precio','$color')";
+         $query = "INSERT INTO imagenes(imagen,nombre,cantidad,descripcion,precio,colores,secciones) values('$imagen','$nombre','$cantidad','$descripcion','$precio','$color','$secciones')";
          $resultado = mysqli_query($conn,$query);
          if($resultado){
               move_uploaded_file($temp,'imagenes/'.$imagen);   

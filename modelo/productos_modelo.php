@@ -36,7 +36,7 @@ class productos_modelo{
     public static function mdlEliminar($id){
         $obj = new conexion();
         $con = $obj -> getConexion();
-        $sql = "UPDATE t_proveedores SET PROV_ESTADO = 2 WHERE PROV_ID = ?";
+        $sql = "UPDATE imagenes SET estado = 2 WHERE cod_imagen = ?";
         $s   = $con->prepare($sql);
         $v   = array($id);
         return $s->execute($v);

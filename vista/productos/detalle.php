@@ -1,22 +1,18 @@
-<br><br><br><br><br><br><br>
-<?php 
-  include('recursos/conexion2.php');
-  $query = "select * from imagenes ";
-  $resultado = mysqli_query($conn,$query);
-?>
-<br><br><br>
+<br><br>
+
+
 <div class="modalDialog">
 	<div>
-    <?php foreach($resultado as $row){ ?> 
-    <img src="public/images/<?php echo $row['imagen']; ?>" class="imgModal" alt="...">
+ 
+    <img src="public/images/<?php echo $this->datos['imagen']; ?>" class="imgModal" alt="...">
 	<br><br>
-	<h1><strong><?php echo $row['nombre']; ?></strong></h1>
+	<h1><strong><?php echo $this->datos['nombre']; ?></strong></h1>
   <br><br>
-	<p><strong><?php echo $row['descripcion']; ?></strong></p>
+	<p><strong><?php echo $this->datos['descripcion']; ?></strong></p>
   <br><br>
-	<h1 class="price"><strong><?php echo $row['precio']; ?></strong></h1>
+	<h1 class="price"><strong><?php echo $this->datos['precio']; ?></strong></h1>
   <br><br>
-  <h3 ><?php echo $row['colores']; ?></h3>
+  <h3 ><?php echo $this->datos['colores']; ?></h3>
 	<br>
   
   <div>
@@ -29,6 +25,6 @@
     </div>
     </div>
 	<br><br><br><br>
-    <?php }?>
+
     </div>
 	</div>

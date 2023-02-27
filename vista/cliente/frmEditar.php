@@ -17,19 +17,17 @@
 
 	<!-- FIN DE MENU -->
 <br><br><br><br><br><br>
-<?php 
-  include('recursos/conexion2.php');
-  $query = "select * from t_usuario";
-  $resultado = mysqli_query($conn,$query);
+<?php
+$var = $this->dato["USU_ROL"];
 ?>
 <form action="?controlador=cliente&accion=editar" autocomplete="off" id="frmRegistro" method="post">
 			<h2 style="color:black; text-align:center;">Editar Clientes</h2>
 						
 			<label for="nombre">nombres</label>
-			<input type="text" name="nombres"  placeholder="nombres" required value="<?php echo $row['USU_NOMBRES']; ?>"/>
+			<input type="text" name="nombres"  placeholder="nombres" required value="<?php echo $this->dato['USU_NOMBRES']; ?>"/>
 			<br>
 			<label for="nombre">apellidos</label>
-			<input type="text" name="apellidos"  placeholder="apellidos" required value="<?php echo $row['USU_NOMBRES']; ?>"/>
+			<input type="text" name="apellidos"  placeholder="apellidos" required value="<?php echo $this->dato['USU_NOMBRES']; ?>"/>
 			<br>
 			<label for="apellidos">Telefono</label>
 			<input type="number" name="whatsapp"  placeholder="telefono" required value="<?php echo $this->dato["USU_TELEFONO"];?>"/>
