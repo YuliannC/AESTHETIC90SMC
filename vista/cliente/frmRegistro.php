@@ -14,32 +14,32 @@
 			</ul>
 		</nav>
 	</div>
-  <br><br><br>
+  <br><br><br><br><br><br>
   <form action="?controlador=cliente&accion=Registrar" autocomplete="off" id="frmRegC" method="post">
-			<h2 style="color:black; text-align:center;">Registrar Clientes</h2>
+			<h2 style="color:black; text-align:left;">Registrar Clientes</h2>
 					<br>	
 			<label for="nombre">nombres</label>
-			<input type="text" name="nombres" id="nombres" placeholder="nombres"/>
+			<input type="text" class="search_input menu_mm" name="nombres" id="nombres" placeholder="Ingresar nombre"/>
 			<br><br>
 			<label for="nombre">apellidos</label>
-			<input type="text" name="apellidos" id="apellidos" placeholder="apellidos"/>
+			<input type="text" class="search_input menu_mm" name="apellidos" id="apellidos" placeholder="Ingresar apellidos"/>
 			<br><br>
 			<label for="apellidos">Telefono</label>
-			<input type="number" name="telefono" id="telefono" placeholder="telefono"/>
+			<input type="number" class="search_input menu_mm" name="telefono" id="telefono" placeholder="Ingresar telefono"/>
 			<br><br>
 			<label for="email" >correo</label>
-			<input type="email" name="correo" id="correo" placeholder="correo" required />
+			<input type="email" class="search_input menu_mm" name="correo" id="correo" placeholder="Ingresar correo" required />
 			<br><br>
 			<label for="asunto">contrasena</label>
-			<input type ="text" name="contrasena" id="contrasena" placeholder="contrasena"/>
+			<input type ="text" class="search_input menu_mm" name="contrasena" id="contrasena" placeholder="Ingresar contrasena"/>
 			<br><br>
-      <select class="form-control" name="srol" id="srol">  
+      <label for="asunto">Rol</label>
+      <select class="search_input menu_mm" name="srol" id="srol">  
           <option value="Administrador">Administrador</option>
           <option value="Cliente">Cliente</option>
       </select>
-			
-			<input type="submit" name="aceptar" value="enviar datos">
-
+      <br><br>
+			<input type="submit" name="aceptar" class="promo_link" value="enviar datos">
 			</form>
 
 	<!-- FIN DE MENU -->

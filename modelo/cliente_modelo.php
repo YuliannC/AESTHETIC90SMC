@@ -6,9 +6,9 @@ class cliente_modelo{
     $sql = "INSERT INTO t_usuario
             (USU_NOMBRES, USU_APELLIDOS, USU_TELEFONO, USU_CORREO, USU_ROL, USU_PASS)
             VALUES
-            (? , ? , ? , ?, ?, ?, ?)";
+            (? , ? , ? , ?, ?, ?)";
     $s = $c->prepare($sql);
-    $v = array($datos["nombres"],$datos["apellidos"],$datos["telefono"],$datos["correo"],,$datos["srol"],sha1($datos["password"]));        
+    $v = array($datos["nombres"],$datos["apellidos"],$datos["telefono"],$datos["correo"],$datos["srol"],sha1($datos["password"]));        
     return $s->execute($v);
   }
         //funcion de editar

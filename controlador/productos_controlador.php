@@ -12,10 +12,7 @@ class productos_controlador{
         $this->vista->unirContenido("productos/principal");
     }
     public function frmRegistrar(){
-        if($_SESSION['USU_ROL'] == "Administrador" )
-                $this->vista->unirContenido("productos/frmRegistro");
-        else
-            header("location: ?controlador=inicio&accion=principal");
+       $this->vista->unirContenido("productos/frmRegistro");
     }
     public function vercarrito(){
         $this->vista->unirContenido("productos/carrito");
@@ -77,11 +74,6 @@ class productos_controlador{
         }
     }
 
-    public function frmEditar(){
-        $id = $_GET["tprev_id"];
-        $this->vista->dato=tipo_revision_modelo::consultarXID($id);
-        $this->vista->unirContenido("tipo_revision/frmEditar");
-    }
     public function editar(){
         extract($_POST);
         $rta = revision_modelo::consultarBYid($rev_codigo);
@@ -108,11 +100,7 @@ class productos_controlador{
         }
     }
 
-    public function frmDetalles(){
-        $id = $_GET["tprev_id"];
-        $this->vista->datos=tipo_revision_modelo::mdlDetalles($id);
-        $this->vista->unirContenido("tipo_revision/frmDetalles");
-    }
+    
 
     public function consultarXfecha(){
         extract($_POST);
@@ -152,6 +140,79 @@ class productos_controlador{
         }else{
         echo json_encode(array("mensaje"=>$tbl));
     }
+    }
+    public function consultarXfechassisi(){
+        extract($_POST);
+        $datos = productos_modelo::mdlconsultarXfechassisi($fechassisi);
+        $tbl   = "<div class='col-lg-14'>";
+        $tbl   .= "<div class='container-items'>";
+        foreach($datos as $v){
+        $id = $v["cod_imagen"];
+        $e = "<a href='?controlador=productos&accion=eliminar&id=$id' class='eliminar'>Eliminar</a>";
+        $ed = "<a href='?controlador=productos&accion=frmEditar&id=$id' class='search_input menu_mm'>Editar</a>";
+        $d ="<a  href='?controlador=productos&accion=detalles&id=$id'class=''>
+             Detalles</a>";
+        $y = "<a  href=''class=''>
+        Añadir al carrito</a>";
+        $estado = $v["estado"] == 1 ? "Disponible":"Agotado";
+        $tbl   .= "<a href='?controlador=productos&accion=frmEditar&id=$id' class='search_input menu_mm'>";
+        $tbl   .= "<img src='public/images/".$v["imagen"]." class='card-img-top' alt='...'>";
+        $tbl   .= "</a>";
+        $tbl   .= "<div class='info-product'>";
+        $tbl   .= "<h4 class='card-title'><strong>".$v["nombre"]."</strong></h4>";
+        $tbl   .= "<h1 class='price'><strong>".$v["precio"]."</strong></h1>";
+        $tbl   .= "<td>$estado</td>";
+        $tbl   .= "<td>$d</td>";
+        $tbl   .= "</div>";
+        $tbl   .= "</div>";
+        $tbl   .= "</div>";
+        $tbl   .= "</div>";
+        $tbl   .= "</div>";
+    }
+        $tbl   .= "</table>";
+        if($fechassisi == ''){
+            echo json_encode(array("mensaje"=>''));
+        }else{
+        echo json_encode(array("mensaje"=>$tbl));
+    }
+    }
+
+    public function consultarXcodigo(){
+        extract($_POST);
+        $datos = productos_modelo::mdlconsultarXcodigo($codigo);
+        $tbl   = "<div class='col-lg-14'>";
+        $tbl   .= "<div class='container-items'>";
+        foreach($datos as $v){
+        $id = $v["cod_imagen"];
+        $e = "<a href='?controlador=productos&accion=eliminar&id=$id' class='eliminar'>Eliminar</a>";
+        $ed = "<a href='?controlador=productos&accion=frmEditar&id=$id' class='search_input menu_mm'>Editar</a>";
+        $d ="<a  href='?controlador=productos&accion=detalles&id=$id'class=''>
+             Detalles</a>";
+        $y = "<a  href=''class=''>
+        Añadir al carrito</a>";
+        $estado = $v["estado"] == 1 ? "Disponible":"Agotado";
+        $tbl   .= "<a href='?controlador=productos&accion=frmEditar&id=$id' class='search_input menu_mm'>";
+        $tbl   .= "<img src='public/images/".$v["imagen"]." class='card-img-top' alt='...'>";
+        $tbl   .= "</a>";
+        $tbl   .= "<div class='info-product'>";
+        $tbl   .= "<h4 class='card-title'><strong>".$v["nombre"]."</strong></h4>";
+        $tbl   .= "<h1 class='price'><strong>".$v["precio"]."</strong></h1>";
+        $tbl   .= "<td>$estado</td>";
+        $tbl   .= "<td>$d</td>";
+        $tbl   .= "</div>";
+        $tbl   .= "</div>";
+        $tbl   .= "</div>";
+        $tbl   .= "</div>";
+        $tbl   .= "</div>";
+    }
+        $tbl   .= "</table>";
+        if($codigo == ''){
+            echo json_encode(array("mensaje"=>''));
+        }else{
+        echo json_encode(array("mensaje"=>$tbl));
+    }
+        
+        
     }
     // public function consultarXfecha(){
     //     extract($_POST);

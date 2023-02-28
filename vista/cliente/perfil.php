@@ -21,18 +21,23 @@
 			</ul>
 		</nav>
 	</div>
-
+	<?php 
+  include('recursos/conexion2.php');
+  $query = "SELECT * FROM t_usuario limit 1";
+  $resultado = mysqli_query($conn,$query);
+?>
 <br><br><br><br><br><br>
-
+<?php foreach($resultado as $row){ ?>
     <div class="card" style="align-items: center;">
         <div class="img">
             <img src="public/images/perfil.png" alt="" >
-        </div><br><br><br><br><br>
+        </div>
         <div class="content">
-            <h2>USUARIO</h2>
-            <button class="btn">Mis compras</button> <br>
-            <a href="?controlador=cliente&accion=frmEditar" class="btn">Editar</a><br>
-            <button class="btn">Cancelar mi pedido</button> 
+            <h2><?php echo $row['USU_NOMBRES']; ?></h2>
+			<a href="?controlador=compras&accion=carrolista" class="btn">Mi carrito</a><br>
+            <a href="?controlador=cliente&accion=frmEditar&id=<?php echo $row['USU_ID']; ?>" class="btn">Editar</a><br>
+			<a href="?controlador=compras&accion=carrolista" class="btn">Cancelar mi pedido</a><br> 
         </div>
     </div>
+	<?php }?>
 <br><br><br><br><br><br>

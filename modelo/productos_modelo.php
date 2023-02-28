@@ -52,23 +52,13 @@ class productos_modelo{
         return $s->fetch();
     }
 
-    public static function consultarXID($id){
-        $obj = new conexion();
-		$con =$obj->getConexion();
-		$sql = "SELECT * FROM T_TP_REVISION 
-        INNER JOIN T_REVISION ON REV_ID = TPREV_REV_ID WHERE TPREV_ID = ?";
-        $s= $con->prepare($sql);
-        $v= array($id);
-        $s-> execute($v);
-        return $s->fetch();
-    }
 
     public static function mdlconsultarXnombre($titulo){
         $obj = new conexion();
         $con = $obj -> getConexion();
         $sql = "SELECT * FROM imagenes WHERE titulo LIKE '$titulo%' AND estado = 1";
         $s = $con->prepare($sql);
-        $v = array($codigo);
+        $v = array($titulo);
         $s->execute();   
         return $s->fetchAll();
     }
@@ -79,6 +69,16 @@ class productos_modelo{
         $s = $c->prepare($sql);
         $v = array($fecha);
         $s->execute();        
+        return $s->fetchAll();
+    }
+    
+    public static function mdlconsultarXcodigo($codigo){
+        $obj = new conexion();
+        $con = $obj -> getConexion();
+        $sql = "SELECT * FROM imagenes WHERE nombre LIKE '$codigo%' AND estado = 1";
+        $s = $con->prepare($sql);
+        $v = array($codigo);
+        $s->execute();   
         return $s->fetchAll();
     }
 }

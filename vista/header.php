@@ -31,7 +31,7 @@
 			<nav class="main_nav">
 				<ul id="navigation">
 					<li><a href="?controlador=inicio&accion=principal">Inicio</a></li>
-					<li><a href="?controlador=productos&accion=vercarrito">Prendas</a></li>
+					<li><a href="?controlador=compras&accion=productos">Prendas</a></li>
 					<li><a href="?controlador=administrador&accion=contactanos">Pqr</a></li>
 					<li><a href="?controlador=administrador&accion=principal">Administracion</a></li>
 				</ul>
@@ -42,37 +42,14 @@
 				</div>
 				<div class="shopping">
 					<!-- Cart -->
-					<a href="?controlador=productos&accion=verbolsa">
+					<a href="?controlador=compras&accion=carrolista">
 						<div class="cart">
 							<img src="public/images/shopping-bag.svg" alt="">
-							<div class="cart_num_container">
-								<div class="cart_num_inner">
-									<div class="cart_num" id="contador-productos">1</div>
-								</div>
-							</div>
-						</div>
-					</a>
-					<!-- Star -->
-					<a href="#">
-						<div class="star">
-							<img src="public/images/star.svg" alt="">
-							<div class="star_num_container">
-								<div class="star_num_inner">
-									<div class="star_num">0</div>
-								</div>
-							</div>
+							
 						</div>
 					</a>
 					<!-- Avatar -->
-					<!-- <a href="?controlador=cliente&accion=perfiles">
-						<div class="avatar">
-							<img src="public/images/avatar.svg" alt="">
-							
-							
-						</div>
-						
-					</a> -->
-					<a href="?controlador=inicio&accion=index">
+					<a href="?controlador=cliente&accion=perfiles">
 						<div class="avatar">
 							<img src="public/images/avatar.svg" alt="">
 							
@@ -80,6 +57,18 @@
 						</div>
 						
 					</a>
+					<a href="?controlador=cliente&accion=salir">
+						<div class="avatar">
+							<img src="public/images/salir.png" alt="">
+							<?php
+                    // echo $this->["CLI_ROL"];
+                    if(isset($_SESSION["USU_ID"])){
+                      echo $_SESSION["USU_NOMBRES"]." ".$_SESSION["USU_APELLIDOS"]. "(".$_SESSION["USU_ROL"].")";
+                    }
+                  ?>
+					</div>
+					</a>
+					
 				</div>
 			</div>
 

@@ -105,13 +105,6 @@ $(function () {
             $("#resultado").html(e.mensaje);
         },'json');
     });
-    $("#rev_codigo").keyup(function(){
-        var x = $(this).val();
-        var url = "?controlador=revision&accion=consultarByRevCod";
-        $.post(url, "rev_codigo="+x, function(e){
-            $("#resultado").html(e.mensaje);
-        },'json');
-    });
 
     $("#apellidos").keyup(function() {
         var apellidos = $(this).val();
@@ -136,9 +129,10 @@ $(function () {
             }
         }, 'json');
     });
+    
     $("#codigo").keyup(function(){
         var codigo = $(this).val();
-        var url ="?controlador=t_revision&accion=consultarXcod_revision";
+        var url ="?controlador=productos&accion=consultarXcodigo";
 
         $.post(url, "codigo="+codigo, function(e){
             if(codigo == ''){
@@ -148,6 +142,26 @@ $(function () {
             }
         }, 'json');
     });
+ 
+    $("#procesar").submit(function(){
+        var datos = $(this).serialize(); 
+        var url = $(this).attr("action"); 
+       
+        $.post(url , datos, function(e){
+            if(e.icono == "error"){
+                Swal.fire(
+                    "Venta  NO procesada ",
+                    '',
+                    e.icono
+                )
+            }else{
+                window.location.href = e.URL;
+            }
+           
+           
+        },'json');
+        return false;
+   });
     $("#frmLogin").submit(function(){
         var datos = $(this).serialize(); 
         var url = $(this).attr("action"); 

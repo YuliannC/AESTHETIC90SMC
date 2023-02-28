@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect('localhost','root','','aesthetic90mc');
+    $conn = mysqli_connect('localhost','root','','aesthetic90mc1');
 // class conexion{
 
 //         $c; 

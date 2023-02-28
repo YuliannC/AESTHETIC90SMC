@@ -22,13 +22,7 @@
   $query = "SELECT * FROM imagenes WHERE estado=1 AND secciones= 4 ORDER BY cod_imagen DESC";
   $resultado = mysqli_query($conn,$query);
 ?>
-<div class="search" style="width:100%;">
-			<form action="#">
-				<input type="search" class="search_input menu_mm" required="required" placeholder="Buscar producto">
-				<button type="submit" id="search_button_menu" class="search_button menu_mm"><img class="menu_mm" src="public/images/magnifying-glass.svg" alt=""></button>
-			</form>
-		</div>
-		<div class="row">
+
         <div class="col-md-3 col-md-offset-9 text-right" >
 		
             <div class="btn-group" role="group">
